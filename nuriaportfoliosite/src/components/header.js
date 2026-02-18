@@ -2,16 +2,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { PROJECT_CATEGORIES as CAT } from "../constants/projectCategories";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navigation = [
-    { name: "CV", to: "/cv" },
-    { name: "UX/UI DESIGN", to: "/projects" },
-    { name: "VIDEOGAMES & XR", to: "/projects" },
-    { name: "OTHER", to: "/projects" },
-  ];
+const navigation = [
+  { name: "CV", to: "/cv" },
+  { name: "UX/UI DESIGN", to: `/projects?cat=${CAT.UXUI.key}` },
+  { name: "VIDEOGAMES & XR", to: `/projects?cat=${CAT.VDXR.key}` },
+  { name: "OTHER", to: `/projects?cat=${CAT.OTHER.key}` },
+];
+
 
   return (
     <div className="bg-white">

@@ -3,10 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import Hero from "./components/hero";
 import ProjectList from "./components/projectList";
+import { projects } from "./constants/projectsData";
 
 import Cv from "./pages/cv";
 import Projects from "./pages/projects";
 import Footer from "./components/footer";
+import ContactSection from "./components/contactSection";
+import AboutSection from "./components/aboutSection";
 // importa las demás cuando existan:
 // import UxUidesign from "./pages/uxuidesign";
 // import VideogamesXR from "./pages/videogamesxr";
@@ -14,11 +17,16 @@ import Footer from "./components/footer";
 // import DetailScreen from "./pages/detailScreen";
 
 function Home() {
+ const homeProjects = projects.filter(
+    (p) => p.id === 1 || p.id === 4
+  );
+
   return (
     <>
       <Hero />
-      <ProjectList />
-      
+      <AboutSection></AboutSection>
+      <ProjectList items={homeProjects} />
+      <ContactSection></ContactSection>
     </>
   );
 }

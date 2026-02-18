@@ -1,10 +1,11 @@
 import Section from "../components/section";
+import Tabsbar from "../components/tabsbar";
 
 
 function Projects(){
     return(
         <div>
-             <h1>Projects</h1>
+             <Tabsbar></Tabsbar>
              <Section></Section>
             
         </div>
