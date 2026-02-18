@@ -1,42 +1,38 @@
-import { Route, Router, Routes } from "react-router-dom";
-import Grid12 from "./components/grid12";
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./components/header";
 import Hero from "./components/hero";
 import ProjectList from "./components/projectList";
 
-/*
-function AppContent() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="cv" element={<Cv />} />
-      <Route path="uxuidesign" element={<UxUidesign />} />
-      <Route path="videogamesxr" element={<VideogamesXR />} />
-      <Route path="other" element={<Other />} />
-      <Route path="/detail/:id" element={<DetailScreen />} />
-    </Routes>
-  )
-}*/
+import Cv from "./pages/cv";
+import Projects from "./pages/projects";
+import Footer from "./components/footer";
+// importa las demás cuando existan:
+// import UxUidesign from "./pages/uxuidesign";
+// import VideogamesXR from "./pages/videogamesxr";
+// import Other from "./pages/other";
+// import DetailScreen from "./pages/detailScreen";
 
-function App() {
+function Home() {
   return (
-   /* <Router>*/
-      <div>
-        <Hero></Hero>
-        <ProjectList></ProjectList>
-          <div className="w-full h-full bg-black flex items-center justify-center">
-        
-     
-        <Grid12>
-          <h1 className="text-6xl font-extrabold text-red-500 underline">      TAILWIND FUNCIONA
-          </h1>
-        </Grid12>
-      </div>
-      </div>
-    
-  /*  </Router>*/
-
+    <>
+      <Hero />
+      <ProjectList />
+      
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/cv" element={<Cv />} />
+      </Routes>
+      <Footer></Footer>
+    </>
+  );
+}
