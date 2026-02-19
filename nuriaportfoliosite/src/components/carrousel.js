@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function ProcessCarousel({ title = "Process", items = [] }) {
   const [active, setActive] = useState(0);
+  const [quickViewItem, setQuickViewItem] = useState(null);
   const wheelLockRef = useRef(false);
   const sectionRef = useRef(null);
 
@@ -59,6 +60,24 @@ export default function ProcessCarousel({ title = "Process", items = [] }) {
     };
   }, [hasItems, canGoNext, canGoPrev]);
 
+  useEffect(() => {
+    if (!quickViewItem) return;
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setQuickViewItem(null);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [quickViewItem]);
+
   if (!hasItems) return null;
 
 return (
@@ -101,17 +120,56 @@ return (
             }}
           >
           {safeItems.map((item, idx) => (
-            <Card key={`${item.title}-${idx}`} item={item} isActive={idx === active} />
+            <Card
+              key={`${item.title}-${idx}`}
+              item={item}
+              isActive={idx === active}
+              onOpen={() => setQuickViewItem(item)}
+            />
           ))}
         </div>
       </div>
     </div>
+    {quickViewItem && (
+      <div
+        className="fixed inset-0 z-50 bg-black/60 p-4 sm:p-8"
+        onClick={() => setQuickViewItem(null)}
+      >
+        <div
+          className="mx-auto mt-6 max-w-5xl bg-[#FFFEFA] text-[#270400] shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex items-center justify-end p-3">
+            <button
+              type="button"
+              onClick={() => setQuickViewItem(null)}
+              className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/25 text-[#270400] transition hover:border-[#270400]/50"
+              aria-label="Close quick view"
+            >
+              X
+            </button>
+          </div>
+
+          <div className="px-4 pb-5 sm:px-6 sm:pb-6">
+            <div className="overflow-hidden border border-[#270400]/10">
+              <img
+                src={quickViewItem.imageSrc}
+                alt={quickViewItem.imageAlt || quickViewItem.title}
+                className="h-auto w-full object-contain"
+              />
+            </div>
+            <h3 className="mt-4 text-xl font-semibold">{quickViewItem.title}</h3>
+            <p className="mt-2 text-sm leading-6 text-[#270400]/75">{quickViewItem.text}</p>
+          </div>
+        </div>
+      </div>
+    )}
   </section>
 );
 
 }
 
-function Card({ item, isActive }) {
+function Card({ item, isActive, onOpen }) {
   return (
     <article
       className={[
@@ -121,6 +179,12 @@ function Card({ item, isActive }) {
         isActive ? "bg-[#270400] text-white" : "bg-[#ffffff] text-[#270400]",
       ].join(" ")}
     >
+      <button
+        type="button"
+        onClick={onOpen}
+        className="block w-full text-left cursor-zoom-in"
+        aria-label={`Open quick view for ${item.title}`}
+      >
       <div className="p-2">
         <div
           className={[
@@ -152,6 +216,7 @@ function Card({ item, isActive }) {
           {item.text}
         </p>
       </div>
+      </button>
     </article>
   );
 }
