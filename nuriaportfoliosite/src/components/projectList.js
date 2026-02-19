@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function ProjectList({ items = [] }) {
   return (
@@ -6,20 +7,22 @@ export default function ProjectList({ items = [] }) {
         <h2 className="sr-only">Projects</h2>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 xl:gap-x-2">
-          {items.map((product) => (
-            <a key={product.id} href={product.href} className="group">
+          {items.map((project) => (
+            <Link
+              key={project.id}
+              to={`/detail/${project.id}`}
+              className="group block"
+            >
               <img
-                alt={product.imageAlt}
-                src={product.imageSrc}
+                alt={project.imageAlt}
+                src={project.imageSrc}
                 className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"
               />
-              <h3 className="mt-4 text-sm text-gray-700">
-                {product.name}
-              </h3>
+              <h3 className="mt-4 text-sm text-gray-700">{project.name}</h3>
               <p className="mt-1 text-lg font-medium text-gray-900">
-                {product.price}
+                {project.price}
               </p>
-            </a>
+            </Link>
           ))}
 
           {items.length === 0 && (

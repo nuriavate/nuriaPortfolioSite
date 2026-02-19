@@ -1,6 +1,6 @@
 
 
-export default function Section({ rightContent = "text", titleh1, titleh2, leftContent }) {
+export default function Section({ rightContent, titleh1, titleh2, leftContent }) {
   return (
     <div className="overflow-hidden bg-white pt-24 sm:pt-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

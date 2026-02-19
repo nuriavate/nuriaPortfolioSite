@@ -19,60 +19,70 @@ export default function Tabsbar() {
     return TABS.find((t) => t.key === activeKey) || TABS[0];
   }, [activeKey]);
 
-  // ✅ hook dentro del componente
   const selectedProjects = useMemo(() => {
     return projects.filter((p) => p.category === activeKey);
   }, [activeKey]);
 
   const setActive = (key) => {
-    setSearchParams((prev) => {
-      const sp = new URLSearchParams(prev);
-      sp.set("cat", key);
-      return sp;
-    }, { replace: true });
+    setSearchParams(
+      (prev) => {
+        const sp = new URLSearchParams(prev);
+        sp.set("cat", key);
+        return sp;
+      },
+      { replace: true }
+    );
   };
 
   return (
-    <div className="p-6">
-      <div className="px-8 py-8 text-[#270400]">
-        <h2 className="text-base/7 font-semibold text-[#270400]">PROJECTS</h2>
+    <div className="overflow-hidden bg-white pt-24 sm:pt-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-10 lg:mx-0 lg:max-w-none">
+          {/* Header (mateix estil que Section) */}
+          <div>
+            <h2 className="text-base/7 font-semibold text-[#270400]">
+              PROJECTS
+            </h2>
 
-        <h2 className="mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl">
-          {activeTab.label}
-        </h2>
+            <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-5xl">
+              {activeTab.label}
+            </p>
 
-        <div className="mt-6 border-b border-[#E63A27]">
-          <div className="flex gap-8">
-            {TABS.map((t) => {
-              const isActive = t.key === activeKey;
-              return (
-                <button
-                  key={t.key}
-                  type="button"
-                  onClick={() => setActive(t.key)}
-                  className={[
-                    "relative pb-3 text-sm font-medium transition",
-                    isActive
-                      ? "text-[#270400]"
-                      : "text-[#E63A27] hover:text-[#270400]",
-                  ].join(" ")}
-                >
-                  {t.label}
-                  <span
-                    className={[
-                      "absolute left-0 -bottom-[1px] h-[2px] w-full rounded",
-                      isActive ? "bg-[#270400]" : "bg-transparent",
-                    ].join(" ")}
-                  />
-                </button>
-              );
-            })}
+            {/* Tabs */}
+            <div className="mt-6 border-b border-[#E63A27]">
+              <div className="flex flex-wrap gap-8">
+                {TABS.map((t) => {
+                  const isActive = t.key === activeKey;
+                  return (
+                    <button
+                      key={t.key}
+                      type="button"
+                      onClick={() => setActive(t.key)}
+                      className={[
+                        "relative pb-3 text-sm font-medium transition",
+                        isActive
+                          ? "text-[#270400]"
+                          : "text-[#E63A27] hover:text-[#270400]",
+                      ].join(" ")}
+                    >
+                      {t.label}
+                      <span
+                        className={[
+                          "absolute left-0 -bottom-[1px] h-[2px] w-full rounded",
+                          isActive ? "bg-[#270400]" : "bg-transparent",
+                        ].join(" ")}
+                      />
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="mt-8">
-          {/* ✅ ProjectList solo pinta lo que le pasas */}
-          <ProjectList items={selectedProjects} />
+          {/* Content */}
+          <div>
+            <ProjectList items={selectedProjects} />
+          </div>
         </div>
       </div>
     </div>
