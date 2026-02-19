@@ -50,7 +50,6 @@ export default function Details() {
 <Barcimed></Barcimed>
       {/* CONTINGUT dins container */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <hr className="my-6 border-t border-[#270400]/10" />
         <p className="mt-6 text-lg">{project.description}</p>
       </div>
     </div>

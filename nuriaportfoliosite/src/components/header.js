@@ -36,7 +36,7 @@ const navigation = [
             </button>
           </div>
 
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="hidden font-urbanist lg:flex lg:gap-x-12">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -75,7 +75,7 @@ const navigation = [
                       key={item.name}
                       to={item.to}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-[#C42817]"
+                      className="font-urbanist -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-[#C42817]"
                     >
                       {item.name}
                     </Link>

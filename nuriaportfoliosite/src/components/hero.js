@@ -29,18 +29,18 @@ export default function Hero() {
      
                     </div>
                     <div className="text-center">
-                        <h1 className="text-5xl font-semibold tracking-tight text-balance text-[#270400] sm:text-7xl">
+                        <h1 className="font-urbanist text-5xl font-semibold tracking-tight text-balance text-[#270400] sm:text-7xl">
                           I’m Núria, a creative multidisciplinary digital designer based in Barcelona. 
                         </h1>
-                        <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
+                        <p className="font-urbanist mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
                            Designing with purpose, sensitivity, and intuitive interaction.
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <a
                                 href="#"
-                                className="rounded-md bg-[#E63A27] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-[#FF5542] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E63A27]"
+                                className="font-grace rounded-md bg-[#E63A27] px-6 py-2.5 text-xl text-white shadow-xs hover:bg-[#FF5542] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E63A27]"
                             >
-                                Discover more
+                                DISCOVER MORE
                             </a>
                         </div>
                     </div>

@@ -124,7 +124,13 @@ return (
               key={`${item.title}-${idx}`}
               item={item}
               isActive={idx === active}
-              onOpen={() => setQuickViewItem(item)}
+              onClick={() => {
+                if (idx !== active) {
+                  setActive(idx);
+                  return;
+                }
+                setQuickViewItem(item);
+              }}
             />
           ))}
         </div>
@@ -169,7 +175,7 @@ return (
 
 }
 
-function Card({ item, isActive, onOpen }) {
+function Card({ item, isActive, onClick }) {
   return (
     <article
       className={[
@@ -181,7 +187,7 @@ function Card({ item, isActive, onOpen }) {
     >
       <button
         type="button"
-        onClick={onOpen}
+        onClick={onClick}
         className="block w-full text-left cursor-zoom-in"
         aria-label={`Open quick view for ${item.title}`}
       >

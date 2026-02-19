@@ -20,7 +20,7 @@ export default function ProjectList({ items = [] }) {
               />
               <h3 className="mt-4 text-sm text-gray-700">{project.name}</h3>
               <p className="mt-1 text-lg font-medium text-gray-900">
-                {project.price}
+                {project.tinDescription}
               </p>
             </Link>
           ))}

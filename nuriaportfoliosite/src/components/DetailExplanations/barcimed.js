@@ -1,8 +1,14 @@
 import ProcessCarousel from "../carrousel";
 import DetailSection from "../detailSection";
+import ProjectList from "../projectList";
 import VideoEmbed from "../videoEmbed";
+import { projects } from "../../constants/projectsData";
+import Section from "../section";
 
 export default function Barcimed() {
+    const homeProjects = projects.filter(
+        (p) => p.id === 1 || p.id === 4
+    );
     const processItems = [
         {
             imageSrc: "/imatges/Barcimed/taskflow.png",
@@ -79,6 +85,36 @@ export default function Barcimed() {
                         <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
                     </div>
                 } />
+            <hr className="space-y-4 border-t border-[#270400]/10" />
+            <DetailSection titleh1="User testing and Results"
+                rightContent={
+                    <div className=" space-y-4">
+                        <p>To validate the project, we conducted testing with three target users. Although the sample was small, it provided valuable qualitative insights about the experience. Participants followed the proposed route using the app and completed a feedback form assessing key aspects of the project.</p>
+                        <p><span className="font-semibold">Positive outcomes: </span>
+                            The experience was immersive and engaging, with 360° videos and sound design particularly appreciated. The minimalist, colorful design and narrative encouraged exploration, and users reported learning about Barcelona’s history. Informational cards were valued for allowing flexible, pressure-free learning, and participants said they would recommend the experience to others.</p>
+                        <p><span className="font-semibold">Areas for improvement:</span> Feedback highlighted usability and navigation issues, including unclear starting points and route guidance. Suggestions included enhancing the map, redesigning the route for efficiency, providing an overview of the journey, and making informational cards more interactive with visual or audio elements.</p>
+                    </div>
+                } />
+            <hr className="space-y-4 border-t border-[#270400]/10" />
+            <DetailSection titleh1="Future Scope"
+                rightContent={
+                    <div className=" space-y-4">
+                        <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
+                        <ul>
+                            <li>- Improve UX and navigation based on user feedback</li>
+                            <li>- Make knowledge cards interactive and relevant to puzzles</li>
+                            <li>- Develop a native mobile app for better performance and immersion</li>
+                            <li>- Expand the storyline and character depth</li>
+                            <li>- Refine technical and artistic details (AI voices, animations, accuracy)</li>
+                            <li>- Add 360° spatial audio to enhance immersion</li>
+                            <li>- Extend to other historical periods, themes, or cities</li>
+                        </ul>
+                    </div>
+                } />
+            <hr className="space-y-4 border-t border-[#270400]/10" />
+            <Section titleh1={"You may also like"}></Section>
+            <ProjectList items={homeProjects} />
+
         </div>
 
     );

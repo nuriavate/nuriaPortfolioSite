@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        urbanist: ["Urbanist", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        grace: ['"Covered By Your Grace"', "cursive"],
+      },
+    },
   },
   plugins: [],
 };
