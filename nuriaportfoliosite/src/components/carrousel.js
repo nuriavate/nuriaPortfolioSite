@@ -48,54 +48,54 @@ export default function ProcessCarousel({ title = "Process", items = [] }) {
 
   if (!hasItems) return null;
 
-  return (
-    <section className="w-full" onWheel={onWheel}>
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="flex items-center justify-between">
-          <h2 className="text-3xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-4xl">
-            {title}
-          </h2>
+return (
+  <section className="bg-[#FFFEFA]" onWheel={onWheel}>
+    <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
+      {/* Header (alineat) */}
+      <div className="flex items-center justify-between">
+        <h2 className="text-3xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-4xl">
+          {title}
+        </h2>
 
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              onClick={prev}
-              disabled={!canGoPrev}
-              className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
-              aria-label="Previous"
-            >
-              {"<"}
-            </button>
-            <button
-              type="button"
-              onClick={next}
-              disabled={!canGoNext}
-              className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
-              aria-label="Next"
-            >
-              {">"}
-            </button>
-          </div>
-        </div>
-
-        <div className="mt-8 overflow-hidden">
-          <div
-            className="flex gap-6 transition-transform duration-500 ease-out"
-            style={{
-              transform: `translateX(calc(-${active} * (min(72vw, 44rem) + 1.5rem)))`,
-            }}
+        <div className="flex items-center gap-4">
+          <button
+            type="button"
+            onClick={prev}
+            disabled={!canGoPrev}
+            className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
+            aria-label="Previous"
           >
-            {safeItems.map((item, idx) => {
-              const isActive = idx === active;
-              return (
-                <Card key={`${item.title}-${idx}`} item={item} isActive={isActive} />
-              );
-            })}
-          </div>
+            {"<"}
+          </button>
+          <button
+            type="button"
+            onClick={next}
+            disabled={!canGoNext}
+            className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
+            aria-label="Next"
+          >
+            {">"}
+          </button>
         </div>
       </div>
-    </section>
-  );
+
+      {/* Track: bleed right (sense padding dret) */}
+      <div className="mt-8 overflow-hidden lg:-mr-[calc((100vw-80rem)/2+2rem)]">
+        <div
+          className="flex gap-6 transition-transform duration-500 ease-out"
+          style={{
+            transform: `translateX(calc(-${active} * (min(72vw, 44rem) + 1.5rem)))`,
+          }}
+        >
+          {safeItems.map((item, idx) => (
+            <Card key={`${item.title}-${idx}`} item={item} isActive={idx === active} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 }
 
 function Card({ item, isActive }) {
