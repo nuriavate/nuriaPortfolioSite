@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -6,6 +6,8 @@ import { PROJECT_CATEGORIES as CAT } from "../constants/projectCategories";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const activeCategory = new URLSearchParams(location.search).get("cat");
 
 const navigation = [
   { name: "CV", to: "/cv" },
@@ -13,6 +15,20 @@ const navigation = [
   { name: "VIDEOGAMES & XR", to: `/projects?cat=${CAT.VDXR.key}` },
   { name: "OTHER", to: `/projects?cat=${CAT.OTHER.key}` },
 ];
+
+  const isNavItemActive = (item) => {
+    if (item.to === "/cv") {
+      return location.pathname === "/cv";
+    }
+
+    if (item.to.startsWith("/projects")) {
+      if (location.pathname !== "/projects") return false;
+      const itemCategory = new URLSearchParams(item.to.split("?")[1] || "").get("cat");
+      return activeCategory === itemCategory;
+    }
+
+    return location.pathname === item.to;
+  };
 
 
   return (
@@ -41,7 +57,9 @@ const navigation = [
               <Link
                 key={item.name}
                 to={item.to}
-                className="text-sm/6 font-semibold text-[#270400]"
+                className={`text-sm/6 font-semibold transition-colors ${
+                  isNavItemActive(item) ? "text-[#E63A27]" : "text-[#270400]"
+                }`}
               >
                 {item.name}
               </Link>
@@ -75,7 +93,11 @@ const navigation = [
                       key={item.name}
                       to={item.to}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="font-urbanist -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-[#C42817]"
+                      className={`font-urbanist -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold transition-colors ${
+                        isNavItemActive(item)
+                          ? "bg-[#C42817] text-white"
+                          : "text-white hover:bg-[#C42817]"
+                      }`}
                     >
                       {item.name}
                     </Link>
