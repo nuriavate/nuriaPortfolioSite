@@ -1,84 +1,94 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 export default function ProcessCarousel({ title = "Process", items = [] }) {
   const [active, setActive] = useState(0);
-
-  const hasItems = items && items.length > 0;
+  const wheelLockRef = useRef(false);
 
   const safeItems = useMemo(() => {
     return Array.isArray(items) ? items : [];
   }, [items]);
 
+  const hasItems = safeItems.length > 0;
+  const canGoPrev = active > 0;
+  const canGoNext = active < safeItems.length - 1;
+
   const prev = () => {
     if (!hasItems) return;
-    setActive((i) => (i - 1 + safeItems.length) % safeItems.length);
+    setActive((i) => Math.max(0, i - 1));
   };
 
   const next = () => {
     if (!hasItems) return;
-    setActive((i) => (i + 1) % safeItems.length);
+    setActive((i) => Math.min(safeItems.length - 1, i + 1));
   };
 
-  // duplica per permetre “loop” visual sense tall (simple)
-  const rail = useMemo(() => {
-    if (!hasItems) return [];
-    // amb pocs items, duplicar ajuda a evitar buits visuals
-    return safeItems.length < 4 ? [...safeItems, ...safeItems, ...safeItems] : [...safeItems, ...safeItems];
-  }, [safeItems, hasItems]);
+  const onWheel = (event) => {
+    if (!hasItems || wheelLockRef.current) return;
+    if (Math.abs(event.deltaY) < 8) return;
 
-  // trobem un index “central” perquè active sempre tingui següent disponible al rail
-  const baseIndex = useMemo(() => {
-    if (!hasItems) return 0;
-    // posem active a la segona còpia per poder anar endavant/enrere
-    const offset = safeItems.length < 4 ? safeItems.length : safeItems.length;
-    return offset + active;
-  }, [active, safeItems.length, hasItems]);
+    if (event.deltaY > 0 && canGoNext) {
+      event.preventDefault();
+      wheelLockRef.current = true;
+      next();
+      window.setTimeout(() => {
+        wheelLockRef.current = false;
+      }, 420);
+      return;
+    }
+
+    if (event.deltaY < 0 && canGoPrev) {
+      event.preventDefault();
+      wheelLockRef.current = true;
+      prev();
+      window.setTimeout(() => {
+        wheelLockRef.current = false;
+      }, 420);
+    }
+  };
 
   if (!hasItems) return null;
 
   return (
-    <section className="w-full">
+    <section className="w-full" onWheel={onWheel}>
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        {/* Header */}
         <div className="flex items-center justify-between">
-          <h2 className=" text-3xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-4xl">{title}</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-4xl">
+            {title}
+          </h2>
 
           <div className="flex items-center gap-4">
             <button
               type="button"
               onClick={prev}
-              className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] hover:border-[#270400]/40 transition"
+              disabled={!canGoPrev}
+              className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
               aria-label="Previous"
             >
-              ←
+              {"<"}
             </button>
             <button
               type="button"
               onClick={next}
-              className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] hover:border-[#270400]/40 transition"
+              disabled={!canGoNext}
+              className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
               aria-label="Next"
             >
-              →
+              {">"}
             </button>
           </div>
         </div>
 
-        {/* Track */}
         <div className="mt-8 overflow-hidden">
           <div
             className="flex gap-6 transition-transform duration-500 ease-out"
             style={{
-              transform: `translateX(calc(-${baseIndex} * (min(72vw, 44rem) + 1.5rem)))`,
+              transform: `translateX(calc(-${active} * (min(72vw, 44rem) + 1.5rem)))`,
             }}
           >
-            {rail.map((item, idx) => {
-              const isActive = idx === baseIndex;
+            {safeItems.map((item, idx) => {
+              const isActive = idx === active;
               return (
-                <Card
-                  key={`${item.title}-${idx}`}
-                  item={item}
-                  isActive={isActive}
-                />
+                <Card key={`${item.title}-${idx}`} item={item} isActive={isActive} />
               );
             })}
           </div>
@@ -92,16 +102,12 @@ function Card({ item, isActive }) {
   return (
     <article
       className={[
-        // mida: en mobile ocupa gairebé tot; en desktop queda com el mockup
         "shrink-0",
         "w-[72vw] sm:w-[60vw] lg:w-[44rem]",
         "transition-colors duration-500",
-        isActive
-          ? "bg-[#270400] text-white"
-          : "bg-[#ffffff] text-[#270400]",
+        isActive ? "bg-[#270400] text-white" : "bg-[#ffffff] text-[#270400]",
       ].join(" ")}
     >
-      {/* image area */}
       <div className="p-2">
         <div
           className={[
@@ -119,7 +125,6 @@ function Card({ item, isActive }) {
         </div>
       </div>
 
-      {/* text area (footer) */}
       <div
         className={[
           "px-6 pb-6",

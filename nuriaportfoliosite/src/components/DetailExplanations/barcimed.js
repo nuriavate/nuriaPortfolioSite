@@ -62,6 +62,12 @@ export default function Barcimed() {
                         <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
                     </div>
                 } />
+                  <DetailSection titleh1="Visual Design"
+                rightContent={
+                    <div>
+                        <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
+                    </div>
+                } />
         </div>
 
     );
