@@ -15,11 +15,11 @@ export default function AboutSection() {
                 <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                     <div className="lg:pr-4">
                         <div className="lg:max-w-lg">
-                            <p className="text-base/7 font-semibold text-[#270400]">ABOUT ME</p>
-                            <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-5xl">
+                            <p className="font-urbanist text-base/7 font-semibold text-[#270400]">ABOUT ME</p>
+                            <h1 className="font-urbanist mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-5xl">
                                 Hi! I'm Núria
                             </h1>
-                            <p className="mt-6 text-xl/8 text-[#270400]">
+                            <p className="font-raleway mt-6 text-xl/8 text-[#270400]">
                                 I recently graduated in Multimedia at CITM, UPC. I am a very creative person and very eager to contribute to our projects related to the creation and design of web pages, UX, UI and video games, application development.
                             </p>
                         </div>
@@ -35,7 +35,7 @@ export default function AboutSection() {
                 <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                     <div className="lg:pr-4">
                         <div className="max-w-xl text-base/7 text-[#270400] lg:max-w-lg">
-                            <p>
+                            <p className='font-raleway' >
                                 Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
                                 vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
                                 erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
@@ -59,29 +59,29 @@ export default function AboutSection() {
 
                             <ul role="list" className="mt-8 space-y-8 text-gray-600">
                                 <li className="flex gap-x-3">
-                                    <CloudArrowUpIcon aria-hidden="true" className="mt-1 size-5 flex-none text-[#E63A27]" />
-                                    <span>
-                                        <strong className="font-semibold text-[#270400]">Push to deploy.</strong> Lorem ipsum, dolor sit amet
+                                    <CloudArrowUpIcon aria-hidden="true" className="font-raleway mt-1 size-5 flex-none text-[#E63A27]" />
+                                    <span className='font-raleway'>
+                                        <strong className="font-raleway font-semibold text-[#270400]">Push to deploy.</strong> Lorem ipsum, dolor sit amet
                                         consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
                                         blanditiis ratione.
                                     </span>
                                 </li>
                                 <li className="flex gap-x-3">
                                     <LockClosedIcon aria-hidden="true" className="mt-1 size-5 flex-none text-[#E63A27]" />
-                                    <span>
-                                        <strong className="font-semibold text-[#270400]">SSL certificates.</strong> Anim aute id magna aliqua
+                                    <span className='font-raleway'>
+                                        <strong className="font-semibold text-[#270400] font-raleway">SSL certificates.</strong> Anim aute id magna aliqua
                                         ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
                                     </span>
                                 </li>
                                 <li className="flex gap-x-3">
                                     <ServerIcon aria-hidden="true" className="mt-1 size-5 flex-none text-[#E63A27]" />
-                                    <span>
-                                        <strong className="font-semibold text-[#270400]">Database backups.</strong> Ac tincidunt sapien
+                                    <span className='font-raleway'>
+                                        <strong className="font-semibold text-[#270400] font-raleway">Database backups.</strong> Ac tincidunt sapien
                                         vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
                                     </span>
                                 </li>
                             </ul>
-                            <p className="mt-8">
+                            <p className="mt-8 font-raleway">
                                 Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
                                 fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
                                 adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.

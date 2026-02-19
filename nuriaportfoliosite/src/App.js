@@ -30,7 +30,7 @@ function Home() {
       
       <Section titleh1={"See what I've done"} titleh2={"WORK"} rightContent={
         <div>
-          <p className="mt-4 text-lg/8 text-[#270400]">Here's a small selection of some of the most creative projects I've had the opportunity to work on.</p>
+          <p className="font-raleway mt-4 text-lg/8 text-[#270400]">Here's a small selection of some of the most creative projects I've had the opportunity to work on.</p>
           <LinkButton src="/Projects?uxui" text={"UX/UI Design Projects"} ></LinkButton>
           <LinkButton src="/Projects?vdxr" text={"Videogames and XR Projects"} ></LinkButton>
           <LinkButton src="/Projects?vdxr" text={"Other Projects"} ></LinkButton>
@@ -43,7 +43,7 @@ function Home() {
       <Section titleh1={"Let's connect!"} titleh2={"CONTACT"} leftContent={
         <div>
           <div className="mx-auto max-w-2xl ">
-            <p className="mt-2 text-lg/8 text-gray-600">Feel free to contact me by email, phone, or throught the form.</p>
+            <p className="mt-2 text-lg/8 text-gray-600 font-raleway">Feel free to contact me by email, phone, or throught the form.</p>
           </div>
           <LinkButton text={"+34 618 517 258"}></LinkButton>
           <LinkButton text={"nvaquerot@gmail.com"}></LinkButton>

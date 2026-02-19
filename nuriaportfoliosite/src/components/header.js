@@ -57,8 +57,10 @@ const navigation = [
               <Link
                 key={item.name}
                 to={item.to}
-                className={`text-sm/6 font-semibold transition-colors ${
-                  isNavItemActive(item) ? "text-[#E63A27]" : "text-[#270400]"
+                className={`relative pb-1 text-sm/6 font-semibold transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:rounded-full after:bg-[#E63A27] after:transition-all after:duration-300 after:content-[''] ${
+                  isNavItemActive(item)
+                    ? "text-[#E63A27] after:w-full"
+                    : "text-[#270400] after:w-0 hover:text-[#E63A27] hover:after:w-full"
                 }`}
               >
                 {item.name}

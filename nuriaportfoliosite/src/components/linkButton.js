@@ -6,9 +6,10 @@ export default function LinkButton({ src = "#", text }) {
       <a
         href={src}
         className="
+        font-urbanist
           group
           inline-flex items-center gap-2
-          text-[18px] font-semibold
+          text-[18px] font-bold
           text-[#E63A27]
           transition-colors
           hover:text-[#FF5542]

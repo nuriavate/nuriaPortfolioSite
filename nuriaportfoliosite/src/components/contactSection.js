@@ -19,7 +19,7 @@ export default function ContactSection() {
             <form action="#" method="POST" className="mx-auto mt-4 max-w-xl">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div>
-                        <label htmlFor="first-name" className="block text-sm/6 font-semibold text-[#270400]">
+                        <label htmlFor="first-name" className="font-urbanist block text-sm/6 font-semibold text-[#270400]">
                             First name
                         </label>
                         <div className="mt-2.5">
@@ -29,6 +29,7 @@ export default function ContactSection() {
                                 type="text"
                                 autoComplete="given-name"
                                 className="
+                                font-raleway
     block w-full rounded-md
     bg-white
     px-3.5 py-2
@@ -44,7 +45,7 @@ export default function ContactSection() {
                         </div>
                     </div>
                     <div>
-                        <label htmlFor="last-name" className="block text-sm/6 font-semibold text-[#270400]">
+                        <label htmlFor="last-name" className="font-urbanist block text-sm/6 font-semibold text-[#270400]">
                             Last name
                         </label>
                         <div className="mt-2.5">
@@ -69,7 +70,7 @@ export default function ContactSection() {
                     </div>
 
                     <div className="sm:col-span-2">
-                        <label htmlFor="email" className="block text-sm/6 font-semibold text-[#270400]">
+                        <label htmlFor="email" className="font-urbanist block text-sm/6 font-semibold text-[#270400]">
                             Email
                         </label>
                         <div className="mt-2.5">
@@ -79,6 +80,7 @@ export default function ContactSection() {
                                 type="email"
                                 autoComplete="email"
                                 className="
+                                font-raleway
   block w-full rounded-md
   bg-white
   px-3.5 py-2
@@ -99,7 +101,7 @@ export default function ContactSection() {
                         </div>
                     </div>
                     <div className="sm:col-span-2">
-                        <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-[#270400]">
+                        <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-[#270400] font-urbanist">
                             Phone number
                         </label>
 
@@ -120,7 +122,7 @@ export default function ContactSection() {
                                         name="country"
                                         autoComplete="country"
                                         aria-label="Country"
-                                        className="
+                                        className="font-raleway
             col-start-1 row-start-1
             w-full appearance-none
             rounded-l-md
@@ -151,6 +153,7 @@ export default function ContactSection() {
                                     type="text"
                                     placeholder="123-456-7890"
                                     className="
+                                    font-raleway
           block min-w-0 grow
           py-2 pr-3 pl-3
           text-base text-[#270400]
@@ -165,7 +168,7 @@ export default function ContactSection() {
                     </div>
 
                     <div className="sm:col-span-2">
-                        <label htmlFor="message" className="block text-sm/6 font-semibold text-[#270400]">
+                        <label htmlFor="message" className="font-urbanist block text-sm/6 font-semibold text-[#270400]">
                             Message
                         </label>
                         <div className="mt-2.5">
@@ -174,7 +177,8 @@ export default function ContactSection() {
                                 name="message"
                                 rows={4}
                                 className="
-    block w-full rounded-md
+    font-raleway
+                                block w-full rounded-md
     bg-white
     px-3.5 py-2
     text-base text-[#270400]
@@ -202,9 +206,9 @@ export default function ContactSection() {
                                 />
                             </div>
                         </div>
-                        <label htmlFor="agree-to-policies" className="text-sm/6 text-[#644E4B]">
+                        <label htmlFor="agree-to-policies" className="text-sm/6 text-[#644E4B] font-raleway">
                             By selecting this, you agree to our{' '}
-                            <a href="#" className="font-semibold whitespace-nowrap text-[#E63A27]">
+                            <a href="#" className="font-raleway font-semibold whitespace-nowrap text-[#E63A27]">
                                 privacy policy
                             </a>
                             .
@@ -214,9 +218,9 @@ export default function ContactSection() {
                 <div className="mt-10">
                     <button
                         type="submit"
-                        className="block w-full rounded-md bg-[#E63A27] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-[#E63A27] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E63A27]"
+                        className="block w-full rounded-md bg-[#E63A27] px-3.5 py-2.5 text-center text-xl text-white shadow-xs hover:bg-[#E63A27] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E63A27] font-grace"
                     >
-                        Let's talk
+                        LET'S TALK
                     </button>
                 </div>
             </form>
