@@ -42,7 +42,7 @@ export default function Barcimed() {
                 titleh1="Problem Statement"
                 rightContent={
                     <div>
-                        <p>
+                        <p className="font-raleway">
                             Barcelona is a city with a great historical and cultural heritage.
                             The Gothic Quarter, the oldest part of the city, still preserves the
                             imprint of its medieval past. Unfortunately, the methods and
@@ -61,7 +61,7 @@ export default function Barcimed() {
                 titleh1="Target Audience"
                 rightContent={
                     <div>
-                        <p>
+                        <p className="font-raleway">
                             The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 12–30), it is designed to be enjoyable for audiences of all ages.
                         </p>
                     </div>
@@ -75,32 +75,32 @@ export default function Barcimed() {
             <DetailSection titleh1="How does it works"
                 rightContent={
                     <div>
-                        <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
+                        <p className="font-raleway">The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
                     </div>
                 } />
             <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1="Visual Design"
                 rightContent={
                     <div>
-                        <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
+                        <p className="font-raleway">The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
                     </div>
                 } />
             <hr className="space-y-4 border-t border-[#270400]/10" />
             <DetailSection titleh1="User testing and Results"
                 rightContent={
                     <div className=" space-y-4">
-                        <p>To validate the project, we conducted testing with three target users. Although the sample was small, it provided valuable qualitative insights about the experience. Participants followed the proposed route using the app and completed a feedback form assessing key aspects of the project.</p>
-                        <p><span className="font-semibold">Positive outcomes: </span>
+                        <p className="font-raleway">To validate the project, we conducted testing with three target users. Although the sample was small, it provided valuable qualitative insights about the experience. Participants followed the proposed route using the app and completed a feedback form assessing key aspects of the project.</p>
+                        <p className="font-raleway"><span className="font-semibold">Positive outcomes: </span>
                             The experience was immersive and engaging, with 360° videos and sound design particularly appreciated. The minimalist, colorful design and narrative encouraged exploration, and users reported learning about Barcelona’s history. Informational cards were valued for allowing flexible, pressure-free learning, and participants said they would recommend the experience to others.</p>
-                        <p><span className="font-semibold">Areas for improvement:</span> Feedback highlighted usability and navigation issues, including unclear starting points and route guidance. Suggestions included enhancing the map, redesigning the route for efficiency, providing an overview of the journey, and making informational cards more interactive with visual or audio elements.</p>
+                        <p className="font-raleway"><span className="font-semibold">Areas for improvement:</span> Feedback highlighted usability and navigation issues, including unclear starting points and route guidance. Suggestions included enhancing the map, redesigning the route for efficiency, providing an overview of the journey, and making informational cards more interactive with visual or audio elements.</p>
                     </div>
                 } />
             <hr className="space-y-4 border-t border-[#270400]/10" />
             <DetailSection titleh1="Future Scope"
                 rightContent={
                     <div className=" space-y-4">
-                        <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
-                        <ul>
+                        <p className="font-raleway">The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
+                        <ul className="font-raleway">
                             <li>- Improve UX and navigation based on user feedback</li>
                             <li>- Make knowledge cards interactive and relevant to puzzles</li>
                             <li>- Develop a native mobile app for better performance and immersion</li>

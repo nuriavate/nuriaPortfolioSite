@@ -55,6 +55,7 @@ export default function ContactSection() {
                                 type="text"
                                 autoComplete="family-name"
                                 className="
+                                font-raleway
     block w-full rounded-md
     bg-white
     px-3.5 py-2

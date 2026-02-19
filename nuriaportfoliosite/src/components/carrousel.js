@@ -85,7 +85,7 @@ return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
       {/* Header (alineat) */}
       <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-4xl">
+        <h2 className="font-urbanist text-3xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-4xl">
           {title}
         </h2>
 
@@ -94,7 +94,7 @@ return (
             type="button"
             onClick={prev}
             disabled={!canGoPrev}
-            className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
+            className=" inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
             aria-label="Previous"
           >
             {"<"}
@@ -103,7 +103,7 @@ return (
             type="button"
             onClick={next}
             disabled={!canGoNext}
-            className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
+            className=" inline-flex h-9 w-9 items-center justify-center border border-[#270400]/20 text-[#270400] transition hover:border-[#270400]/40 disabled:cursor-not-allowed disabled:opacity-40"
             aria-label="Next"
           >
             {">"}
@@ -149,7 +149,7 @@ return (
             <button
               type="button"
               onClick={() => setQuickViewItem(null)}
-              className="inline-flex h-9 w-9 items-center justify-center border border-[#270400]/25 text-[#270400] transition hover:border-[#270400]/50"
+              className=" inline-flex h-9 w-9 items-center justify-center border border-[#270400]/25 text-[#270400] transition hover:border-[#270400]/50"
               aria-label="Close quick view"
             >
               X
@@ -164,8 +164,8 @@ return (
                 className="h-auto w-full object-contain"
               />
             </div>
-            <h3 className="mt-4 text-xl font-semibold">{quickViewItem.title}</h3>
-            <p className="mt-2 text-sm leading-6 text-[#270400]/75">{quickViewItem.text}</p>
+            <h3 className="font-urbanist mt-4 text-xl font-semibold">{quickViewItem.title}</h3>
+            <p className="font-raleway mt-2 text-sm leading-6 text-[#270400]/75">{quickViewItem.text}</p>
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@ function Card({ item, isActive, onClick }) {
       className={[
         "shrink-0",
         "w-[78vw] sm:w-[66vw] lg:w-[48rem]",
-        "transition-colors duration-500",
+        "transition-colors duration-500 ",
         isActive ? "bg-[#270400] text-white" : "bg-[#ffffff] text-[#270400]",
       ].join(" ")}
     >
@@ -215,10 +215,10 @@ function Card({ item, isActive, onClick }) {
           isActive ? "border-t border-white/15" : "border-t border-[#270400]/10",
         ].join(" ")}
       >
-        <h3 className={["text-sm font-semibold", isActive ? "text-white" : "text-[#270400]"].join(" ")}>
+        <h3 className={["font-urbanist text-lg font-semibold", isActive ? "text-white" : "text-[#270400]"].join(" ")}>
           {item.title}
         </h3>
-        <p className={["mt-2 text-sm leading-6", isActive ? "text-white/80" : "text-[#270400]/70"].join(" ")}>
+        <p className={["font-raleway mt-2 text-sm leading-6", isActive ? "text-white/80" : "text-[#270400]/70"].join(" ")}>
           {item.text}
         </p>
       </div>
