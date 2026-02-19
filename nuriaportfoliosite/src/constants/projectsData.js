@@ -44,7 +44,7 @@ export const projects = [
         client: 'Final Degree Project',
         KeyActivities: ["UX/UI", "Gamification", "Development", "Prototyping"],
         price: '$35',
-        imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-04.jpg',
+        imageSrc: '/imatges/Barcimed/portadaBarcimed.png',
         imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
     {

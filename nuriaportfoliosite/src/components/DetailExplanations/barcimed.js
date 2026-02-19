@@ -3,23 +3,33 @@ import DetailSection from "../detailSection";
 import VideoEmbed from "../videoEmbed";
 
 export default function Barcimed() {
-     const processItems = [
-  {
-    imageSrc: "/imatges/Barcimed/taskflow.png",
-    title: "1. Taskflow",
-    text: "I created a taskflow representing the steps a user goes through to complete a level in the app",
-  },
-  {
-    imageSrc: "/imatges/Barcimed/userflow.png",
-    title: "2. Userflow",
-    text: "I illustrated the user journeys and information architecture with Figma.",
-  },
-  {
-    imageSrc: "/imatges/Barcimed/wireframes.png",
-    title: "3. Wireframes",
-    text: "Low fidelity wireframes to validate hierarchy and navigation.",
-  },
-];
+    const processItems = [
+        {
+            imageSrc: "/imatges/Barcimed/taskflow.png",
+            title: "1. Taskflow",
+            text: "I created a taskflow representing the steps a user goes through to complete a level in the app",
+        },
+        {
+            imageSrc: "/imatges/Barcimed/userflow.png",
+            title: "2. Userflow",
+            text: "I illustrated the user journeys and information architecture with Figma.",
+        },
+        {
+            imageSrc: "/imatges/Barcimed/wireframes.png",
+            title: "3. Wireframes",
+            text: "Low fidelity wireframes to validate hierarchy and navigation.",
+        },
+        {
+            imageSrc: "/imatges/Barcimed/components.jpg",
+            title: "4. Components",
+            text: "Next, I designed the components, including buttons, cards, illustrations, and other UI elements.",
+        },
+        {
+            imageSrc: "/imatges/Barcimed/highfid.png",
+            title: "5.High-Fidelity Prototype",
+            text: "The high-fidelity prototype has a clean, colorful, minimalist style highlighting the gamified elements.",
+        },
+    ];
     return (
         <div>
             <DetailSection
@@ -52,17 +62,18 @@ export default function Barcimed() {
                 }
             />
             <img className="mx-auto max-w-7xl px-6 lg:px-8" src="/imatges/Barcimed/public.png"></img>
-       <hr className="my-4 border-t border-[#270400]/10" />        
-<ProcessCarousel title="Process" items={processItems} />
+            <hr className="my-4 border-t border-[#270400]/10" />
+            <ProcessCarousel title="Process" items={processItems} />
 
-
+            <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1="How does it works"
                 rightContent={
                     <div>
                         <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
                     </div>
                 } />
-                  <DetailSection titleh1="Visual Design"
+            <hr className="my-4 border-t border-[#270400]/10" />
+            <DetailSection titleh1="Visual Design"
                 rightContent={
                     <div>
                         <p>The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>

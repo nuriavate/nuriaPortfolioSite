@@ -18,7 +18,7 @@ export default function ProjectHeader({
         </p>
 
         {/* Title */}
-        <h1 className="mt-3 font-serif text-5xl leading-tight text-[#270400] sm:text-6xl">
+        <h1 className="mt-3 text-5xl leading-tight text-[#270400] sm:text-6xl">
           {title}
         </h1>
 

@@ -1,8 +1,9 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function ProcessCarousel({ title = "Process", items = [] }) {
   const [active, setActive] = useState(0);
   const wheelLockRef = useRef(false);
+  const sectionRef = useRef(null);
 
   const safeItems = useMemo(() => {
     return Array.isArray(items) ? items : [];
@@ -22,34 +23,46 @@ export default function ProcessCarousel({ title = "Process", items = [] }) {
     setActive((i) => Math.min(safeItems.length - 1, i + 1));
   };
 
-  const onWheel = (event) => {
-    if (!hasItems || wheelLockRef.current) return;
-    if (Math.abs(event.deltaY) < 8) return;
+  useEffect(() => {
+    const handleWheel = (event) => {
+      if (!hasItems || !sectionRef.current) return;
+      if (Math.abs(event.deltaY) < 8) return;
 
-    if (event.deltaY > 0 && canGoNext) {
+      const rect = sectionRef.current.getBoundingClientRect();
+      const viewportCenterY = window.innerHeight / 2;
+      const isCentered = rect.top <= viewportCenterY && rect.bottom >= viewportCenterY;
+      if (!isCentered) return;
+
+      const scrollingDown = event.deltaY > 0;
+      const canMove = scrollingDown ? canGoNext : canGoPrev;
+      if (!canMove) return;
+
+      // Lock vertical page scroll while the carousel still has horizontal steps.
       event.preventDefault();
+      if (wheelLockRef.current) return;
+
       wheelLockRef.current = true;
-      next();
+      if (scrollingDown) {
+        next();
+      } else {
+        prev();
+      }
+
       window.setTimeout(() => {
         wheelLockRef.current = false;
       }, 420);
-      return;
-    }
+    };
 
-    if (event.deltaY < 0 && canGoPrev) {
-      event.preventDefault();
-      wheelLockRef.current = true;
-      prev();
-      window.setTimeout(() => {
-        wheelLockRef.current = false;
-      }, 420);
-    }
-  };
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, [hasItems, canGoNext, canGoPrev]);
 
   if (!hasItems) return null;
 
 return (
-  <section className="bg-[#FFFEFA]" onWheel={onWheel}>
+  <section ref={sectionRef} >
     <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
       {/* Header (alineat) */}
       <div className="flex items-center justify-between">
@@ -82,11 +95,11 @@ return (
       {/* Track: bleed right (sense padding dret) */}
       <div className="mt-8 overflow-hidden lg:-mr-[calc((100vw-80rem)/2+2rem)]">
         <div
-          className="flex gap-6 transition-transform duration-500 ease-out"
-          style={{
-            transform: `translateX(calc(-${active} * (min(72vw, 44rem) + 1.5rem)))`,
-          }}
-        >
+            className="flex gap-6 transition-transform duration-500 ease-out"
+            style={{
+              transform: `translateX(calc(-${active} * (min(78vw, 48rem) + 1.5rem)))`,
+            }}
+          >
           {safeItems.map((item, idx) => (
             <Card key={`${item.title}-${idx}`} item={item} isActive={idx === active} />
           ))}
@@ -103,7 +116,7 @@ function Card({ item, isActive }) {
     <article
       className={[
         "shrink-0",
-        "w-[72vw] sm:w-[60vw] lg:w-[44rem]",
+        "w-[78vw] sm:w-[66vw] lg:w-[48rem]",
         "transition-colors duration-500",
         isActive ? "bg-[#270400] text-white" : "bg-[#ffffff] text-[#270400]",
       ].join(" ")}
