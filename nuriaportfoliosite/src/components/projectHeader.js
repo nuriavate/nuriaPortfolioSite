@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 export default function ProjectHeader({
+  categoryKey,
   categoryLabel = "UX/UI DESIGN",
   title,
   timeline,
@@ -12,10 +15,31 @@ export default function ProjectHeader({
   return (
     <section className=" pt-24 sm:pt-14 sm:pb-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Top meta */}
-        <p className="text-[11px] tracking-[0.32em] uppercase text-[#270400]/70">
-          WORKS / {categoryLabel}
-        </p>
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb">
+          <ol className="font-urbanist font-bold flex items-center gap-2 text-[11px] tracking-[0.32em] uppercase text-[#270400]/70">
+            <li>
+              <Link to="/projects" className="hover:text-[#270400] transition-colors">
+                Projects
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              {categoryKey ? (
+                <Link
+                  to={`/projects?cat=${categoryKey}`}
+                  className="hover:text-[#270400] transition-colors"
+                >
+                  {categoryLabel}
+                </Link>
+              ) : (
+                categoryLabel
+              )}
+            </li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page">{title}</li>
+          </ol>
+        </nav>
 
         {/* Title */}
         <h1 className="font-urbanist font-semibold mt-3 text-5xl leading-tight text-[#270400] sm:text-6xl">

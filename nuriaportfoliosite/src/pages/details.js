@@ -87,6 +87,7 @@ gsap.fromTo(
 
 
       <ProjectHeader
+        categoryKey={project.category}
         categoryLabel={categoryLabel}
         title={project.name}
         timeline={project.timeline}

@@ -8,7 +8,7 @@ export const projects = [
         client: 'Corporació Catalana de Mitjans Audiovisuals',
         KeyActivities: ["UX/UI", "Gamification", "Development", "Prototyping"],
         tinDescription:'Design a prototype for improving engagement',
-        imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-01.jpg',
+        imageSrc: '/imatges/3cat/portada3Cat.png',
         imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
     },
     {
