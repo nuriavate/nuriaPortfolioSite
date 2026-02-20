@@ -40,11 +40,11 @@ export default function Tabsbar() {
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-10 lg:mx-0 lg:max-w-none">
           {/* Header (mateix estil que Section) */}
           <div>
-            <h2 className="text-base/7 font-semibold text-[#270400]">
+            <h2 className="font-urbanist text-base/7 font-semibold text-[#270400]">
               PROJECTS
             </h2>
 
-            <p className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-5xl">
+            <p className="font-urbanist mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-5xl">
               {activeTab.label}
             </p>
 
@@ -59,7 +59,7 @@ export default function Tabsbar() {
                       type="button"
                       onClick={() => setActive(t.key)}
                       className={[
-                        "relative pb-3 text-sm font-medium transition",
+                        "font-urbanist relative pb-3 text-lg font-bold transition",
                         isActive
                           ? "text-[#270400]"
                           : "text-[#E63A27] hover:text-[#270400]",

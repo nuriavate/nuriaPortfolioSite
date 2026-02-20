@@ -1,4 +1,13 @@
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+
+function zoomIn(target) {
+  gsap.to(target, { scale: 1.08, duration: 0.45, ease: "power2.out" });
+}
+
+function zoomOut(target) {
+  gsap.to(target, { scale: 1, duration: 0.45, ease: "power2.out" });
+}
 
 export default function ProjectList({ items = [] }) {
   return (
@@ -12,12 +21,23 @@ export default function ProjectList({ items = [] }) {
               key={project.id}
               to={`/detail/${project.id}`}
               className="group block"
+              onMouseEnter={(e) => {
+                const image = e.currentTarget.querySelector("[data-project-image]");
+                if (image) zoomIn(image);
+              }}
+              onMouseLeave={(e) => {
+                const image = e.currentTarget.querySelector("[data-project-image]");
+                if (image) zoomOut(image);
+              }}
             >
-              <img
-                alt={project.imageAlt}
-                src={project.imageSrc}
-                className="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8"
-              />
+              <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-7/8">
+                <img
+                  data-project-image
+                  alt={project.imageAlt}
+                  src={project.imageSrc}
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <h3 className="mt-4 text-lg text-[#E63A27] font-raleway font-semibold">{project.name}</h3>
               <p className="mt-1 text-sm font-medium text-[#270400] font-raleway">
                 {project.tinDescription}
