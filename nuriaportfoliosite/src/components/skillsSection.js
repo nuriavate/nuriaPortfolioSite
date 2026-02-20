@@ -1,11 +1,12 @@
-import { PencilSquareIcon, FaceSmileIcon } from "@heroicons/react/24/outline";
+import { CodeBracketIcon } from "@heroicons/react/20/solid";
+import { PaintBrushIcon, FaceSmileIcon } from "@heroicons/react/24/outline";
 
 export default function SkillsSection() {
   return (
     <section className="w-full">
       <div className="mx-auto max-w-2xl px-6 py-16 lg:max-w-7xl lg:px-8">
         {/* Title */}
-        <h1 className="text-4xl font-semibold text-[#270400] sm:text-4xl">
+        <h1 className="font-urbanist text-4xl font-semibold text-[#270400] sm:text-4xl">
           Skills
         </h1>
 
@@ -14,10 +15,10 @@ export default function SkillsSection() {
           {/* Software */}
           <div className="lg:pr-12">
             <IconWrap>
-              <PencilSquareIcon className="h-7 w-7 text-[#270400]" aria-hidden="true" />
+              <PaintBrushIcon className="h-8 w-8 text-[#270400]" aria-hidden="true" />
             </IconWrap>
 
-            <h3 className="mt-6 text-base font-semibold text-[#270400]">
+            <h3 className="font-urbanist mt-6 font-semibold text-[#270400] text-2xl">
               Software
             </h3>
 
@@ -36,10 +37,10 @@ export default function SkillsSection() {
           {/* Programming Languages */}
           <div className="lg:border-l lg:border-r lg:border-[#270400]/15 lg:px-12">
             <IconWrap>
-              <CodeIcon />
+              <CodeBracketIcon className="h-8 w-8" />
             </IconWrap>
 
-            <h3 className="mt-6 text-base font-semibold text-[#270400]">
+            <h3 className="font-urbanist mt-6 text-2xl font-semibold text-[#270400]">
               Programming Languages
             </h3>
 
@@ -58,14 +59,14 @@ export default function SkillsSection() {
           {/* Interpersonal */}
           <div className="lg:pl-12">
             <IconWrap>
-              <FaceSmileIcon className="h-7 w-7 text-[#270400]" aria-hidden="true" />
+              <FaceSmileIcon className="h-8 w-8 text-[#270400]" aria-hidden="true" />
             </IconWrap>
 
-            <h3 className="mt-6 text-base font-semibold text-[#270400]">
+            <h3 className="font-urbanist mt-6 text-2xl font-semibold text-[#270400]">
               Interpersonal Skills
             </h3>
 
-            <p className="mt-8 text-sm leading-6 text-[#270400]/70">
+            <p className="mt-8 text-base leading-6 text-[#270400] font-raleway">
               Flexible, Communicative, Self Starter, creative problem solver,
               Empathy, Detail Oriented
             </p>
@@ -83,8 +84,8 @@ function IconWrap({ children }) {
 function Block({ label, text }) {
   return (
     <div>
-      <p className="text-sm font-semibold text-[#270400]">{label}</p>
-      <p className="mt-2 text-sm leading-6 text-[#270400]/70">{text}</p>
+      <p className="text-base font-semibold text-[#270400] font-raleway">{label}</p>
+      <p className="font-raleway mt-2 text-base leading-6 text-[#270400]">{text}</p>
     </div>
   );
 }

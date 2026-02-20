@@ -10,8 +10,8 @@ function Cv() {
         <div>
             <Section titleh1={"Curriculum Vitae"} titleh2={"CV"} rightContent={
                 <div className="pt-4">
-                    <p>Núria Vaquero Tell</p>
-                    <p>Born 7 February 2003, NJ, USA
+                    <p className="font-raleway">Núria Vaquero Tell</p>
+                    <p className="font-raleway">Born 7 February 2003, NJ, USA
                         Living and raised in Barcelona, Spain</p>
                     <LinkButton src="#" text={"+34 618 517 258"}></LinkButton>
                     <LinkButton src="#" text={"nvaquerot@gmail.com"}></LinkButton>
@@ -26,7 +26,7 @@ function Cv() {
             <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
 
                 <div className="mt-16">
-                    <h1 className="text-4xl font-semibold text-[#270400] sm:text-4xl">
+                    <h1 className="font-urbanist text-4xl font-semibold text-[#270400] sm:text-4xl">
                         Awards and Recognitions
                     </h1>
 

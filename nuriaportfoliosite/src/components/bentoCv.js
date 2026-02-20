@@ -19,7 +19,7 @@ export default function BentoCV() {
 <div className="relative lg:row-span-2">
   <div className="relative flex h-full flex-col">
     <div className="pr-8 pt-8 pb-3 sm:pr-10">
-      <h1 className="mt-2 text-4xl font-semibold text-[#270400] sm:text-4xl">
+      <h1 className="font-urbanist mt-2 text-4xl font-semibold text-[#270400] sm:text-4xl">
         Working Experience
       </h1>
     </div>
@@ -38,7 +38,7 @@ export default function BentoCV() {
   <div className="relative flex h-full flex-col">
 
     <div className="pr-8 pt-8 sm:pr-10 sm:pt-10">
-      <h1 className="mt-2 text-4xl font-semibold text-[#270400] sm:text-4xl">
+      <h1 className="font-urbanist mt-2 text-4xl font-semibold text-[#270400] sm:text-4xl">
         Education
       </h1>
     </div>
@@ -60,19 +60,19 @@ export default function BentoCV() {
 
     </div>
 
-<h1 className="mt-2 text-4xl font-semibold tracking-tight text-[#270400] sm:text-4xl">
+<h1 className="font-urbanist mt-2 text-4xl font-semibold tracking-tight text-[#270400] sm:text-4xl">
   Language
 </h1>
 
 <div className="mt-6 pr-8 pb-8 sm:pr-10 space-y-4">
   <div>
-    <p className="font-medium">Catalan, Spanish</p>
-    <p className="text-sm text-gray-600">Native</p>
+    <p className="text-2xl font-semibold font-urbanist text-[#270400]">Catalan, Spanish</p>
+    <p className="font-raleway text-base text-[#270400]">Native</p>
   </div>
 
   <div>
-    <p className="font-medium">English</p>
-    <p className="text-sm text-gray-600">
+    <p className="text-2xl font-semibold font-urbanist text-[#270400]">English</p>
+    <p className="font-raleway text-base text-[#270400]">
       Cambridge English: B2 First (FCE)
     </p>
   </div>
