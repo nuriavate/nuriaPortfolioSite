@@ -84,7 +84,7 @@ gsap.fromTo(
           type="button"
           onClick={() => navigate(-1)}
           aria-label="Go back"
-          className="absolute left-8 top-8 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/85 text-[#270400] shadow-sm backdrop-blur transition hover:bg-white"
+          className="fixed left-8 top-24 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/85 text-[#270400] shadow-sm backdrop-blur transition hover:bg-white"
         >
           <ArrowLeftIcon className="h-5 w-5" />
         </button>
@@ -109,7 +109,7 @@ gsap.fromTo(
           type="button"
           onClick={() => navigate(-1)}
           aria-label="Go back"
-          className="absolute left-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/85 text-[#270400] shadow-sm backdrop-blur"
+          className="absolute left-4 top-8 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/85 text-[#270400] shadow-sm backdrop-blur"
         >
           <ArrowLeftIcon className="h-5 w-5" />
         </button>
