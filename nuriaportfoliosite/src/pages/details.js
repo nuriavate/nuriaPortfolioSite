@@ -6,6 +6,24 @@ import { projects } from "../constants/projectsData";
 import { PROJECT_CATEGORIES } from "../constants/projectCategories";
 import ProjectHeader from "../components/projectHeader";
 import Barcimed from "../components/DetailExplanations/barcimed";
+import Trescat from "../components/DetailExplanations/3cat";
+import BookEcho from "../components/DetailExplanations/bookecho";
+import NN from "../components/DetailExplanations/nn";
+import Giravolt from "../components/DetailExplanations/giravolt";
+import KitchenHunt from "../components/DetailExplanations/kitchenhunt";
+import Farmacia from "../components/DetailExplanations/farmacia";
+import StrangerThings from "../components/DetailExplanations/strangerthings";
+
+const detailComponents = {
+  "3cat.js": Trescat,
+  "barcimed.js": Barcimed,
+  "bookecho.js": BookEcho,
+  "nn.js": NN,
+  "giravolt.js": Giravolt,
+  "kitchenhunt.js": KitchenHunt,
+  "farmacia.js": Farmacia,
+  "strangerthings.js": StrangerThings,
+};
 
 export default function Details() {
   const desktopCoverRef = useRef(null);
@@ -13,6 +31,7 @@ export default function Details() {
   const numericId = Number(id);
 
   const project = projects.find((p) => p.id === numericId);
+  const DetailContent = detailComponents[project?.contenido];
   const categoryLabel =
     Object.values(PROJECT_CATEGORIES).find((c) => c.key === project?.category)
       ?.label ?? project?.category;
@@ -95,7 +114,7 @@ gsap.fromTo(
         keyActivities={project.KeyActivities}
       />
        <hr className="my-4 border-t border-[#270400]/10" />
-<Barcimed></Barcimed>
+      {DetailContent ? <DetailContent /> : null}
       {/* CONTINGUT dins container */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <p className="mt-6 text-lg">{project.description}</p>

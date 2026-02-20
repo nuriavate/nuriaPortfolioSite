@@ -99,7 +99,7 @@ export const projects = [
     client: 'Class project',
     KeyActivities: ["UX/UI", "Gamification", "Development", "Prototyping"],
     tinDescription: 'Animation inspired in Stragner Things',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-08.jpg',
+    imageSrc: '/imatges/StrangerThings/portadaST.png',
     imageAlt: 'Textured gray felt pouch for paper cards with snap button flap and elastic pen holder loop.',
      contenido: 'strangerthings.js',
   },
