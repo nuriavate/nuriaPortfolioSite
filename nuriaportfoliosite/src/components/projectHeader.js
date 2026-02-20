@@ -17,7 +17,7 @@ export default function ProjectHeader({
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb">
-          <ol className="font-urbanist font-bold flex items-center gap-2 text-[11px] tracking-[0.32em] uppercase text-[#270400]/70">
+          <ol className="font-urbanist font-bold flex items-center gap-2 text-base uppercase text-[#270400]">
             <li>
               <Link to="/projects" className="hover:text-[#270400] transition-colors">
                 Projects
