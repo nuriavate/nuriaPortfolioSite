@@ -34,7 +34,7 @@ export const projects = [
     client: 'Nuñez i Navarro',
     KeyActivities: ["UX/UI", "Gamification", "Development", "Prototyping"],
     tinDescription: 'Exploring Google Maps Integration in NN pages',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-03.jpg',
+    imageSrc: '/imatges/NN/portadaNN.png',
     imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
      contenido: 'nn.js',
   },
