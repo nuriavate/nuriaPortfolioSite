@@ -90,10 +90,3 @@ function Block({ label, text }) {
   );
 }
 
-function CodeIcon() {
-  return (
-    <div className="flex h-8 w-8 items-center justify-center text-[#270400]">
-      <span className="font-mono text-lg leading-none">&lt;&gt;</span>
-    </div>
-  );
-}

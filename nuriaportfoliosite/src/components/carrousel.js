@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 export default function ProcessCarousel({ title = "Process", items = [] }) {
   const [active, setActive] = useState(0);
@@ -14,15 +14,15 @@ export default function ProcessCarousel({ title = "Process", items = [] }) {
   const canGoPrev = active > 0;
   const canGoNext = active < safeItems.length - 1;
 
-  const prev = () => {
+  const prev = useCallback(() => {
     if (!hasItems) return;
     setActive((i) => Math.max(0, i - 1));
-  };
+  }, [hasItems]);
 
-  const next = () => {
+  const next = useCallback(() => {
     if (!hasItems) return;
     setActive((i) => Math.min(safeItems.length - 1, i + 1));
-  };
+  }, [hasItems, safeItems.length]);
 
   useEffect(() => {
     const handleWheel = (event) => {
@@ -58,7 +58,7 @@ export default function ProcessCarousel({ title = "Process", items = [] }) {
     return () => {
       window.removeEventListener("wheel", handleWheel);
     };
-  }, [hasItems, canGoNext, canGoPrev]);
+  }, [hasItems, canGoNext, canGoPrev, next, prev]);
 
   useEffect(() => {
     if (!quickViewItem) return;

@@ -64,7 +64,7 @@ gsap.fromTo(
     });
 
     return () => mm.revert();
-  }, [project?.id]);
+  }, [project]);
 
   if (!project) {
     return (

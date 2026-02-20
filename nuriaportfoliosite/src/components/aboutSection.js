@@ -1,6 +1,4 @@
-import { Button } from '@headlessui/react'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import LinkButton from './linkButton';
 import ButtonText from './buttonText';
 
@@ -57,7 +55,7 @@ export default function AboutSection() {
                             />
 
 
-                            <ul role="list" className="mt-8 space-y-8 text-gray-600">
+                            <ul className="mt-8 space-y-8 text-gray-600">
                                 <li className="flex gap-x-3">
                                     <CloudArrowUpIcon aria-hidden="true" className="font-raleway mt-1 size-5 flex-none text-[#E63A27]" />
                                     <span className='font-raleway'>

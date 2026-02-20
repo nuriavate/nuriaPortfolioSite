@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Section from "../components/section";
 import LinkButton from "../components/linkButton";
 import BentoCV from "../components/bentoCv";

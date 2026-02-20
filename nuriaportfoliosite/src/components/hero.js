@@ -1,12 +1,4 @@
-import { useState } from 'react'
-import { Dialog, DialogPanel } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Header from './header'
-
-
 export default function Hero() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
     return (
         <div className="bg-[#F5F5F5]">
 
@@ -37,7 +29,7 @@ export default function Hero() {
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <a
-                                href="#"
+                                href="/projects"
                                 className="font-grace rounded-md bg-[#E63A27] px-6 py-2.5 text-xl text-white shadow-xs hover:bg-[#FF5542] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E63A27]"
                             >
                                 DISCOVER MORE

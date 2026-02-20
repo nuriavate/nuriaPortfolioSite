@@ -209,7 +209,7 @@ export default function ContactSection() {
                         </div>
                         <label htmlFor="agree-to-policies" className="text-sm/6 text-[#644E4B] font-raleway">
                             By selecting this, you agree to our{' '}
-                            <a href="#" className="font-raleway font-semibold whitespace-nowrap text-[#E63A27]">
+                            <a href="/privacy-policy" className="font-raleway font-semibold whitespace-nowrap text-[#E63A27]">
                                 privacy policy
                             </a>
                             .
