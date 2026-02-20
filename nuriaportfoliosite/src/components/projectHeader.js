@@ -10,7 +10,7 @@ export default function ProjectHeader({
   awardIssuer,
 }) {
   return (
-    <section className=" pt-24 sm:pt-28 sm:pb-28">
+    <section className=" pt-24 sm:pt-14 sm:pb-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Top meta */}
         <p className="text-[11px] tracking-[0.32em] uppercase text-[#270400]/70">
@@ -18,7 +18,7 @@ export default function ProjectHeader({
         </p>
 
         {/* Title */}
-        <h1 className="mt-3 text-5xl leading-tight text-[#270400] sm:text-6xl">
+        <h1 className="font-urbanist font-semibold mt-3 text-5xl leading-tight text-[#270400] sm:text-6xl">
           {title}
         </h1>
 
@@ -32,11 +32,11 @@ export default function ProjectHeader({
 
           {/* Right column */}
           <div>
-            <p className="text-[11px] tracking-[0.32em] uppercase text-[#270400]/70">
+            <p className="font-urbanist font-black text-lg uppercase text-[#270400]">
               KEY ACTIVITIES
             </p>
 
-            <ul className="mt-3 space-y-1 text-sm leading-6 text-[#270400]/80">
+            <ul className="font-raleway mt-3 space-y-1 text-base leading-6 text-[#270400]">
               {keyActivities.map((a) => (
                 <li key={a}>{a}</li>
               ))}
@@ -69,10 +69,10 @@ export default function ProjectHeader({
 function MetaBlock({ label, value }) {
   return (
     <div>
-      <p className="text-[11px] tracking-[0.32em] uppercase text-[#270400]/70">
+      <p className="font-urbanist font-black text-lg uppercase text-[#270400]">
         {label}
       </p>
-      <p className="mt-2 text-sm text-[#270400]/80">{value}</p>
+      <p className="font-raleway mt-2 text-sm text-[#270400]">{value}</p>
     </div>
   );
 }
@@ -83,7 +83,7 @@ function AwardInline({ title, issuer }) {
       <PlantCrownIcon className="mt-1 h-5 w-5 text-[#E63A27]" />
       <div>
         <p className="text-sm font-medium text-[#E63A27]">{title}</p>
-        <p className="mt-1 text-xs text-[#270400]/70">{issuer}</p>
+        <p className="mt-1 text-base text-[#270400]/70">{issuer}</p>
       </div>
     </div>
   );
