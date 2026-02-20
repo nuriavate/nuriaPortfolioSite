@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "../constants/projectsData";
@@ -27,6 +28,7 @@ const detailComponents = {
 
 export default function Details() {
   const desktopCoverRef = useRef(null);
+  const navigate = useNavigate();
   const { id } = useParams();
   const numericId = Number(id);
 
@@ -78,6 +80,14 @@ gsap.fromTo(
 
       {/* Desktop: full-screen cover with fixed background for parallax-like scroll */}
       <div className="relative left-1/2 right-1/2 -mx-[50vw] hidden w-screen lg:block">
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          aria-label="Go back"
+          className="absolute left-8 top-8 z-20 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/85 text-[#270400] shadow-sm backdrop-blur transition hover:bg-white"
+        >
+          <ArrowLeftIcon className="h-5 w-5" />
+        </button>
 <div className="relative left-1/2 right-1/2 -mx-[50vw] hidden w-screen lg:block">
   
   <div className="h-[70vh] w-full overflow-hidden">
@@ -95,6 +105,14 @@ gsap.fromTo(
 
       {/* Mobile/Tablet: regular cover image */}
       <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen lg:hidden">
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          aria-label="Go back"
+          className="absolute left-4 top-4 z-20 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/85 text-[#270400] shadow-sm backdrop-blur"
+        >
+          <ArrowLeftIcon className="h-5 w-5" />
+        </button>
         <div className="aspect-[5/3] w-full overflow-hidden">
           <img
             src={project.imageSrc}
