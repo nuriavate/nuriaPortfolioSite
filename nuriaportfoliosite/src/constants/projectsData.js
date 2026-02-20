@@ -73,7 +73,7 @@ export const projects = [
     client: 'Class project',
     KeyActivities: ["UX/UI", "Gamification", "Development", "Prototyping"],
     tinDescription: 'A kitchen videogame made in Unity',
-    imageSrc: 'https://tailwindcss.com/plus-assets/img/ecommerce-images/category-page-04-image-card-06.jpg',
+    imageSrc: '/imatges/KitchenHunt/kitchenhuntv2.png',
     imageAlt: 'Stack of 3 small drab green cardboard paper card refill boxes with white text.',
      contenido: 'kitchenhunt.js',
   },

@@ -4,8 +4,8 @@ import { PROJECT_CATEGORIES as CAT } from "../constants/projectCategories";
 import { projects } from "../constants/projectsData";
 import ProjectList from "./projectList";
 
-const TABS = Object.values(CAT);
-const DEFAULT_TAB = "uxui";
+const TABS = [{ key: "all", label: "All" }, ...Object.values(CAT)];
+const DEFAULT_TAB = "all";
 
 export default function Tabsbar() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -20,6 +20,7 @@ export default function Tabsbar() {
   }, [activeKey]);
 
   const selectedProjects = useMemo(() => {
+    if (activeKey === "all") return projects;
     return projects.filter((p) => p.category === activeKey);
   }, [activeKey]);
 
