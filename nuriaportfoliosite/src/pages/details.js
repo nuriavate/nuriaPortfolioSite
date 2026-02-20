@@ -54,14 +54,14 @@ gsap.fromTo(
   }
 
   return (
-    <div className="pt-24 text-[#270400]">
+    <div className="pt-24 text-[#270400] lg:pt-0">
 
 
       {/* Desktop: full-screen cover with fixed background for parallax-like scroll */}
       <div className="relative left-1/2 right-1/2 -mx-[50vw] hidden w-screen lg:block">
 <div className="relative left-1/2 right-1/2 -mx-[50vw] hidden w-screen lg:block">
   
-  <div className="h-[80vh] w-full overflow-hidden">
+  <div className="h-[70vh] w-full overflow-hidden">
     <div
       ref={desktopCoverRef}
       className="h-full w-full bg-cover bg-center bg-no-repeat bg-fixed"
