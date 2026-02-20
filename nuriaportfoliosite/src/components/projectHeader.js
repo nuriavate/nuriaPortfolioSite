@@ -72,7 +72,7 @@ function MetaBlock({ label, value }) {
       <p className="font-urbanist font-black text-lg uppercase text-[#270400]">
         {label}
       </p>
-      <p className="font-raleway mt-2 text-sm text-[#270400]">{value}</p>
+      <p className="font-raleway mt-2 text-base text-[#270400]">{value}</p>
     </div>
   );
 }
