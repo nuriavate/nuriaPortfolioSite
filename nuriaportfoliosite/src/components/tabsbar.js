@@ -51,7 +51,7 @@ export default function Tabsbar() {
 
             {/* Tabs */}
             <div className="mt-6 border-b border-[#E63A27]">
-              <div className="flex flex-wrap gap-8">
+              <div className="flex gap-8 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible">
                 {TABS.map((t) => {
                   const isActive = t.key === activeKey;
                   return (
@@ -60,7 +60,7 @@ export default function Tabsbar() {
                       type="button"
                       onClick={() => setActive(t.key)}
                       className={[
-                        "font-urbanist relative pb-3 text-lg font-bold transition",
+                        "font-urbanist relative shrink-0 pb-3 text-lg font-bold transition",
                         isActive
                           ? "text-[#270400]"
                           : "text-[#E63A27] hover:text-[#270400]",

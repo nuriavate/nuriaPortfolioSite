@@ -67,11 +67,13 @@ export default function Barcimed() {
                     </div>
                 }
             />
-            <img
-                className="mx-auto max-w-7xl px-6 lg:px-8"
-                src="/imatges/Barcimed/public.png"
-                alt="Barcimed target audience graphic"
-            />
+            <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
+                <img
+                    className="block h-auto w-full"
+                    src="/imatges/Barcimed/public.png"
+                    alt="Barcimed target audience graphic"
+                />
+            </div>
             <hr className="my-4 border-t border-[#270400]/10" />
             <ProcessCarousel title="Process" items={processItems} />
 

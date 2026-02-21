@@ -47,7 +47,7 @@ export default function ProjectHeader({
         </h1>
 
         {/* 2-col meta grid */}
-        <div className="mt-10 grid gap-y-10 lg:grid-cols-2 lg:gap-x-24">
+        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 lg:gap-x-24">
           {/* Left column */}
           <div className="space-y-10">
             <MetaBlock label="TIMELINE" value={timeline} />
