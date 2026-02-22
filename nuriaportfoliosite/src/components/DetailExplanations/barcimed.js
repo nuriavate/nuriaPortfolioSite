@@ -41,7 +41,7 @@ export default function Barcimed() {
             <DetailSection
                 titleh1="Problem Statement"
                 rightContent={
-                    <div>
+                    <div className="space-y-4">
                         <p className="font-raleway">
                             Barcelona is a city with a great historical and cultural heritage.
                             The Gothic Quarter, the oldest part of the city, still preserves the
@@ -50,6 +50,7 @@ export default function Barcimed() {
                             to a certain disconnection between young people and the knowledge of
                             their own city’s history.
                         </p>
+                        <p className="font-raleway">The goal was to create an immersive, gamified experience that combines narrative and geolocation, connects with young audiences, motivates them to learn, and sparks interest in the city’s history.</p>
                     </div>
                 }
             />
