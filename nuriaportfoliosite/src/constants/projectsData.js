@@ -2,11 +2,11 @@ export const projects = [
   {
     id: 1,
     name: '3Cat Gamified Experience',
-    href: '#',
+    href: 'https://www.3cat.cat/3cat/',
     category: 'uxui',
     timeline: '4 months',
     client: 'Corporació Catalana de Mitjans Audiovisuals',
-    KeyActivities: ["UX/UI", "Gamification", "Development", "Prototyping"],
+    KeyActivities: ["UX Research & Insight Analysis", "Gamification", "High-Fidelity Prototyping", "Usability Testing & Iteration"],
     tinDescription: 'Design a prototype for improving engagement',
     imageSrc: '/imatges/3cat/portada3Cat.png',
     imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
