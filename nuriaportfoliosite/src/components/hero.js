@@ -1,12 +1,53 @@
+import { useState } from "react";
+
 export default function Hero() {
+    const [pointerGlow, setPointerGlow] = useState({
+        x: 0,
+        y: 0,
+        visible: false,
+    });
+
+    function handleMouseMove(event) {
+        const rect = event.currentTarget.getBoundingClientRect();
+        setPointerGlow({
+            x: event.clientX - rect.left,
+            y: event.clientY - rect.top,
+            visible: true,
+        });
+    }
+
+    function handleMouseLeave() {
+        setPointerGlow((prev) => ({ ...prev, visible: false }));
+    }
+
     return (
-        <div className="relative overflow-hidden bg-[#F5F5F5]">
+        <div
+            className="group relative overflow-hidden bg-white"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+        >
             <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 -z-0"
+                className="pointer-events-none absolute inset-0 -z-0 transition-all duration-700 ease-out group-hover:scale-[1.03]"
                 style={{
                     background:
                         "radial-gradient(90% 65% at 50% 88%, rgba(230,58,39,0.95) 0%, rgba(230,58,39,0.55) 35%, rgba(230,58,39,0.22) 58%, rgba(230,58,39,0.08) 72%, rgba(245,245,245,0) 88%)",
+                }}
+            />
+            <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 -z-0 opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
+                style={{
+                    background:
+                        "radial-gradient(95% 70% at 58% 82%, rgba(230,58,39,0.95) 0%, rgba(230,58,39,0.45) 34%, rgba(230,58,39,0.16) 58%, rgba(245,245,245,0) 86%)",
+                }}
+            />
+            <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-300 ease-out"
+                style={{
+                    opacity: pointerGlow.visible ? 1 : 0,
+                    background: `radial-gradient(220px circle at ${pointerGlow.x}px ${pointerGlow.y}px, rgba(230,58,39,0.28) 0%, rgba(230,58,39,0.14) 35%, rgba(230,58,39,0.06) 55%, rgba(230,58,39,0) 75%)`,
                 }}
             />
 
@@ -32,7 +73,7 @@ export default function Hero() {
                         <h1 className="font-urbanist text-5xl font-semibold tracking-tight text-balance text-[#270400] sm:text-7xl">
                           I’m Núria, a creative multidisciplinary digital designer based in Barcelona. 
                         </h1>
-                        <p className="font-urbanist mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
+                        <p className="font-urbanist mt-8 text-lg font-medium text-pretty text-[#270400] sm:text-xl/8">
                            Designing with purpose, sensitivity, and intuitive interaction.
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
