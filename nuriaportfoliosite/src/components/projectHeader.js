@@ -13,31 +13,35 @@ export default function ProjectHeader({
   awardIssuer,
 }) {
   return (
-    <section className=" pt-24 sm:pt-14 sm:pb-14">
+    <section className="pt-12 sm:pt-10 sm:pb-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb">
-          <ol className="font-urbanist font-bold flex items-center gap-2 text-base uppercase text-[#270400]">
+          <ol className="font-urbanist flex flex-nowrap items-center gap-1 overflow-hidden whitespace-nowrap text-[11px] font-bold uppercase text-[#270400] sm:gap-2 sm:text-base">
             <li>
               <Link to="/projects" className="hover:text-[#270400] transition-colors">
                 Projects
               </Link>
             </li>
             <li aria-hidden="true">/</li>
-            <li>
+            <li className="min-w-0 max-w-[32vw] sm:max-w-none">
               {categoryKey ? (
                 <Link
                   to={`/projects?cat=${categoryKey}`}
-                  className="hover:text-[#270400] transition-colors"
+                  className="inline-block max-w-full truncate align-bottom transition-colors hover:text-[#270400]"
                 >
                   {categoryLabel}
                 </Link>
               ) : (
-                categoryLabel
+                <span className="inline-block max-w-full truncate align-bottom">
+                  {categoryLabel}
+                </span>
               )}
             </li>
             <li aria-hidden="true">/</li>
-            <li aria-current="page">{title}</li>
+            <li aria-current="page" className="min-w-0 flex-1 truncate">
+              {title}
+            </li>
           </ol>
         </nav>
 
