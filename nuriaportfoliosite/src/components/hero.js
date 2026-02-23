@@ -1,9 +1,17 @@
 export default function Hero() {
     return (
-        <div className="bg-[#F5F5F5]">
+        <div className="relative overflow-hidden bg-[#F5F5F5]">
+            <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 -z-0"
+                style={{
+                    background:
+                        "radial-gradient(90% 65% at 50% 88%, rgba(230,58,39,0.95) 0%, rgba(230,58,39,0.55) 35%, rgba(230,58,39,0.22) 58%, rgba(230,58,39,0.08) 72%, rgba(245,245,245,0) 88%)",
+                }}
+            />
 
 
-            <div className="relative isolate px-6 pt-14 lg:px-8">
+            <div className="relative isolate z-10 px-6 pt-14 lg:px-8">
                 <div
                     aria-hidden="true"
                     className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
