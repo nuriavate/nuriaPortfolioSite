@@ -1,5 +1,9 @@
+import DetailSection from "../detailSection";
+
 export default function BookEcho(){
     return(
-        <div></div>
+        <div>
+            <DetailSection titleh1={"Problem Statement"} ></DetailSection>
+        </div>
     );
 }
