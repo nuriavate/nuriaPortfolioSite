@@ -33,12 +33,6 @@ export default function AboutSection() {
                 <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                     <div className="lg:pr-4">
                         <div className="max-w-xl text-base/7 text-[#270400] lg:max-w-lg">
-                            <p className='font-raleway' >
-                                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                                vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                                erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                                semper sed amet vitae sed turpis id.
-                            </p>
 
                             <LinkButton
                                 src="/cv/VaqueroNuriaCV_2026.pdf"
@@ -54,36 +48,6 @@ export default function AboutSection() {
                                 text="CV"
                             />
 
-
-                            <ul className="mt-8 space-y-8 text-gray-600">
-                                <li className="flex gap-x-3">
-                                    <CloudArrowUpIcon aria-hidden="true" className="font-raleway mt-1 size-5 flex-none text-[#E63A27]" />
-                                    <span className='font-raleway'>
-                                        <strong className="font-raleway font-semibold text-[#270400]">Push to deploy.</strong> Lorem ipsum, dolor sit amet
-                                        consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-                                        blanditiis ratione.
-                                    </span>
-                                </li>
-                                <li className="flex gap-x-3">
-                                    <LockClosedIcon aria-hidden="true" className="mt-1 size-5 flex-none text-[#E63A27]" />
-                                    <span className='font-raleway'>
-                                        <strong className="font-semibold text-[#270400] font-raleway">SSL certificates.</strong> Anim aute id magna aliqua
-                                        ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
-                                    </span>
-                                </li>
-                                <li className="flex gap-x-3">
-                                    <ServerIcon aria-hidden="true" className="mt-1 size-5 flex-none text-[#E63A27]" />
-                                    <span className='font-raleway'>
-                                        <strong className="font-semibold text-[#270400] font-raleway">Database backups.</strong> Ac tincidunt sapien
-                                        vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.
-                                    </span>
-                                </li>
-                            </ul>
-                            <p className="mt-8 font-raleway">
-                                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
-                                fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
-                                adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                            </p>
                         </div>
                     </div>
                 </div>
