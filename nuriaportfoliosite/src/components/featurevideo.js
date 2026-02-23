@@ -3,6 +3,7 @@ export default function FeatureVideo({
   alt = "",
   className = "",
   aspect = "video", // "video" | "square" | "auto"
+  flush = false,
 }) {
   const aspectClass =
     aspect === "video"
@@ -12,7 +13,7 @@ export default function FeatureVideo({
       : "";
 
   return (
-    <div className="w-full mx-auto max-w-7xl px-0 sm:px-6 lg:px-8">
+    <div className={flush ? "w-full" : "w-full mx-auto max-w-7xl px-0 sm:px-6 lg:px-8"}>
       {aspect !== "auto" ? (
         <div className={`relative w-full ${aspectClass}`}>
           <video
