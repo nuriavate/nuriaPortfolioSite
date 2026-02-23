@@ -1,4 +1,4 @@
-﻿import DetailSection from "../detailSection";
+import DetailSection from "../detailSection";
 import FeatureVideo from "../featurevideo";
 import FullImage from "../Fullimage";
 import Section from "../section";
