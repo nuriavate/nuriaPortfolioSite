@@ -18,10 +18,7 @@ export default function Trescat() {
                     </p>
                     <p>
                         We were challenged to ideate new ways to gamify the platform to get more involved with the youth and engage them. The delivery was a high-fidelity prototype in Figma, tested and documented, but the proposals were evaluated during the process for the client.
-                        Goals:
-                        Innovative concept
-                        Connexion with different targets
-                        Gamify experience
+                        Goals: Innovative concept, Connexion with different targets, Gamify experience
                     </p>
                 </div>
             } />
