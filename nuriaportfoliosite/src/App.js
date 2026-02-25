@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/header";
 import Hero from "./components/hero";
-import ProjectList from "./components/projectList";
+import FeaturedProjectsBento from "./components/featuredProjectsBento";
 import { projects } from "./constants/projectsData";
 
 import Cv from "./pages/cv";
@@ -20,9 +20,7 @@ import Details from "./pages/details";
 // import DetailScreen from "./pages/detailScreen";
 
 function Home() {
-  const homeProjects = projects.filter(
-    (p) => p.id === 1 || p.id === 4
-  );
+  const homeProjects = projects.slice(0, 6);
 
   return (
     <>
@@ -38,7 +36,7 @@ function Home() {
           </div>
         }*/></Section>
       </div>
-      <ProjectList items={homeProjects} />
+      <FeaturedProjectsBento items={homeProjects} />
       <hr className="my-4 border-t border-[#270400]/10" />
       <AboutSection></AboutSection>
       <hr className="my-4 border-t border-[#270400]/10" />
