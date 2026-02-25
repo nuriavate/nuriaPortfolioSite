@@ -13,8 +13,8 @@ export default function ProjectHeader({
   awardIssuer,
 }) {
   return (
-    <section className="pt-12 sm:pt-10 sm:pb-14">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="pt-16 sm:pt-20 pb-10 sm:pb-12">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb">
           <ol className="font-urbanist flex flex-nowrap items-center gap-1 overflow-hidden whitespace-nowrap text-[11px] font-bold uppercase text-[#270400] sm:gap-2 sm:text-base">
@@ -46,14 +46,14 @@ export default function ProjectHeader({
         </nav>
 
         {/* Title */}
-        <h1 className="font-urbanist font-semibold mt-3 text-5xl leading-tight text-[#270400] sm:text-6xl">
+        <h1 className="font-urbanist mt-4 text-5xl font-semibold leading-tight text-[#270400] sm:text-6xl">
           {title}
         </h1>
 
         {/* 2-col meta grid */}
-        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 lg:gap-x-24">
+        <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:gap-x-16">
           {/* Left column */}
-          <div className="space-y-10">
+          <div className="space-y-8">
             <MetaBlock label="TIMELINE" value={timeline} />
             <MetaBlock label="CLIENT" value={client} />
           </div>
@@ -64,7 +64,7 @@ export default function ProjectHeader({
               KEY ACTIVITIES
             </p>
 
-            <ul className="font-manrope mt-3 space-y-1 text-base leading-6 text-[#270400]">
+            <ul className="font-manrope mt-3 space-y-1.5 text-base leading-6 text-[#270400]">
               {keyActivities.map((a) => (
                 <li key={a}>{a}</li>
               ))}
@@ -75,7 +75,7 @@ export default function ProjectHeader({
                 href={linkUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-block text-sm font-medium text-[#E63A27] hover:text-[#270400] transition"
+                className="mt-6 inline-block text-sm font-medium text-[#E63A27] transition hover:text-[#270400]"
               >
                 {linkText}
               </a>
@@ -85,7 +85,7 @@ export default function ProjectHeader({
 
         {/* Award */}
         {awardTitle && awardIssuer && (
-          <div className="mt-12">
+          <div className="mt-10">
             <AwardInline title={awardTitle} issuer={awardIssuer} />
           </div>
         )}

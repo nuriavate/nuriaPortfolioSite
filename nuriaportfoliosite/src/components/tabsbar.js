@@ -36,22 +36,18 @@ export default function Tabsbar() {
   };
 
   return (
-    <div className="overflow-hidden bg-white pt-24 sm:pt-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-10 lg:mx-0 lg:max-w-none">
-          {/* Header (mateix estil que Section) */}
+    <div className="overflow-hidden  pt-20 sm:pt-24">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-none">
           <div>
-            <h2 className="font-urbanist text-base/7 font-semibold text-[#270400]">
-              PROJECTS
-            </h2>
+            <h2 className="sr-only">Projects</h2>
 
-            <p className="font-urbanist mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-5xl">
+            <p className="font-urbanist text-[2.4rem] font-semibold tracking-tight text-[#270400] sm:text-[3.5rem] lg:text-[4.2rem]">
               {activeTab.label}
             </p>
 
-            {/* Tabs */}
-            <div className="mt-6 border-b border-[#E63A27]">
-              <div className="flex gap-8 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible">
+            <div className="mt-8">
+              <div className="flex flex-wrap gap-3 pb-2">
                 {TABS.map((t) => {
                   const isActive = t.key === activeKey;
                   return (
@@ -60,19 +56,13 @@ export default function Tabsbar() {
                       type="button"
                       onClick={() => setActive(t.key)}
                       className={[
-                        "font-urbanist relative shrink-0 pb-3 text-lg font-bold transition",
+                        "font-manrope shrink-0 rounded-full border px-4 py-2 text-sm sm:text-base transition-colors duration-200",
                         isActive
-                          ? "text-[#270400]"
-                          : "text-[#E63A27] hover:text-[#270400]",
+                          ? "border-[#E63A27] bg-[#E63A27] text-white"
+                          : "border-[#E63A27] bg-transparent text-[#E63A27] hover:border-[#E63A27] hover:text-[#E63A27]",
                       ].join(" ")}
                     >
                       {t.label}
-                      <span
-                        className={[
-                          "absolute left-0 -bottom-[1px] h-[2px] w-full rounded",
-                          isActive ? "bg-[#270400]" : "bg-transparent",
-                        ].join(" ")}
-                      />
                     </button>
                   );
                 })}
@@ -81,7 +71,7 @@ export default function Tabsbar() {
           </div>
 
           {/* Content */}
-          <div>
+          <div className="pt-4">
             <ProjectList items={selectedProjects} />
           </div>
         </div>

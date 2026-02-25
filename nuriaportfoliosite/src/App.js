@@ -26,7 +26,7 @@ function Home() {
     <>
       <Hero />
       
-      <div id="projects">
+      <div id="projects" className="mb-6">
         <Section titleh1={"Featured Works"} titleh2={"PROJECTS"} /*rightContent={
           <div>
             <p className="font-manrope mt-4 text-lg/8 text-[#270400]">Here's a small selection of some of the most creative projects I've had the opportunity to work on.</p>
@@ -40,18 +40,20 @@ function Home() {
       <hr className="my-4 border-t border-[#270400]/10" />
       <AboutSection></AboutSection>
       <hr className="my-4 border-t border-[#270400]/10" />
-      <Section titleh1={"Let's connect!"} titleh2={"CONTACT"} leftContent={
-        <div>
-          <div className="mx-auto max-w-2xl ">
-            <p className="mt-2 text-lg/8 text-gray-600 font-manrope">Feel free to contact me by email, phone, or throught the form.</p>
+      <div className="mb-6">
+        <Section titleh1={"Let's connect!"} titleh2={"CONTACT"} leftContent={
+          <div>
+            <div className="mx-auto max-w-2xl ">
+              <p className="mt-2 text-lg/8 text-gray-600 font-manrope">Feel free to contact me by email, phone, or throught the form.</p>
+            </div>
+            <LinkButton text={"+34 618 517 258"}></LinkButton>
+            <LinkButton text={"nvaquerot@gmail.com"}></LinkButton>
+            <LinkButton text={"Linkedin"}></LinkButton>
           </div>
-          <LinkButton text={"+34 618 517 258"}></LinkButton>
-          <LinkButton text={"nvaquerot@gmail.com"}></LinkButton>
-          <LinkButton text={"Linkedin"}></LinkButton>
-        </div>
-      } rightContent={
-        <ContactSection></ContactSection>
-      }></Section>
+        } rightContent={
+          <ContactSection></ContactSection>
+        }></Section>
+      </div>
 
 
     </>

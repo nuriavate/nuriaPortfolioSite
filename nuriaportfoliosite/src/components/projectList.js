@@ -18,7 +18,7 @@ function zoomOut(target) {
 export default function ProjectList({ items = [] }) {
   return (
     <div className="bg-white">
-      <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
         <h2 className="sr-only">Projects</h2>
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
@@ -59,7 +59,7 @@ export default function ProjectList({ items = [] }) {
           ))}
 
           {items.length === 0 && (
-            <p className="font-manrope col-span-full text-sm text-gray-500">
+            <p className="font-manrope col-span-full pt-2 text-sm text-gray-500">
               No projects in this category.
             </p>
           )}
