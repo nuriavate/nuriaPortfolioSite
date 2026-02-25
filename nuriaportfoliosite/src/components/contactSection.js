@@ -1,6 +1,42 @@
-import { ChevronDownIcon } from '@heroicons/react/16/solid'
+import { useState } from "react";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 export default function ContactSection() {
+    const [status, setStatus] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const formData = new FormData(form);
+
+        const firstName = (formData.get("first-name") || "").toString().trim();
+        const lastName = (formData.get("last-name") || "").toString().trim();
+        const email = (formData.get("email") || "").toString().trim();
+        const country = (formData.get("country") || "").toString().trim();
+        const phone = (formData.get("phone-number") || "").toString().trim();
+        const message = (formData.get("message") || "").toString().trim();
+
+        if (!firstName || !email || !message) {
+            setStatus("Please fill in name, email and message.");
+            return;
+        }
+
+        const subject = encodeURIComponent(`Portfolio contact from ${firstName} ${lastName}`.trim());
+        const body = encodeURIComponent(
+            [
+                `Name: ${firstName} ${lastName}`.trim(),
+                `Email: ${email}`,
+                `Phone: ${country} ${phone}`.trim(),
+                "",
+                "Message:",
+                message,
+            ].join("\n")
+        );
+
+        window.location.href = `mailto:nvaquerot@gmail.com?subject=${subject}&body=${body}`;
+        setStatus("Opening your email app...");
+    };
+
     return (
         <div className="isolate bg-white px-6 py-4  lg:px-8">
             <div
@@ -16,7 +52,7 @@ export default function ContactSection() {
                 />
             </div>
 
-            <form action="#" method="POST" className="mx-auto mt-4 max-w-xl">
+            <form onSubmit={handleSubmit} className="mx-auto mt-4 max-w-xl">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div>
                         <label htmlFor="first-name" className="font-urbanist block text-sm/6 font-semibold text-[#270400]">
@@ -27,6 +63,7 @@ export default function ContactSection() {
                                 id="first-name"
                                 name="first-name"
                                 type="text"
+                                required
                                 autoComplete="given-name"
                                 className="
                                 font-manrope
@@ -79,6 +116,7 @@ export default function ContactSection() {
                                 id="email"
                                 name="email"
                                 type="email"
+                                required
                                 autoComplete="email"
                                 className="
                                 font-manrope
@@ -177,6 +215,7 @@ export default function ContactSection() {
                                 id="message"
                                 name="message"
                                 rows={4}
+                                required
                                 className="
     font-manrope
                                 block w-full rounded-md
@@ -194,27 +233,6 @@ export default function ContactSection() {
                             />
                         </div>
                     </div>
-                    <div className="flex gap-x-4 sm:col-span-2">
-                        <div className="flex h-6 items-center">
-                            <div className="group relative inline-flex w-8 shrink-0 rounded-full bg-gray-200 p-px inset-ring inset-ring-gray-900/5 outline-offset-2 outline-[#E63A27] transition-colors duration-200 ease-in-out has-checked:bg-indigo-600 has-focus-visible:outline-2">
-                                <span className="size-4 rounded-full bg-white shadow-xs ring-1 ring-[#270400]/5 transition-transform duration-200 ease-in-out group-has-checked:translate-x-3.5" />
-                                <input
-                                    id="agree-to-policies"
-                                    name="agree-to-policies"
-                                    type="checkbox"
-                                    aria-label="Agree to policies"
-                                    className="absolute inset-0 size-full appearance-none focus:outline-hidden"
-                                />
-                            </div>
-                        </div>
-                        <label htmlFor="agree-to-policies" className="text-sm/6 text-[#644E4B] font-manrope">
-                            By selecting this, you agree to our{' '}
-                            <a href="/privacy-policy" className="font-manrope font-semibold whitespace-nowrap text-[#E63A27]">
-                                privacy policy
-                            </a>
-                            .
-                        </label>
-                    </div>
                 </div>
                 <div className="mt-10">
                     <button
@@ -223,6 +241,9 @@ export default function ContactSection() {
                     >
                         LET'S TALK
                     </button>
+                    {status && (
+                        <p className="mt-3 text-sm font-manrope text-[#270400]/70">{status}</p>
+                    )}
                 </div>
             </form>
         </div>

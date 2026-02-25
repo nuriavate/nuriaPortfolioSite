@@ -10,6 +10,7 @@ export default function Header() {
   const activeCategory = new URLSearchParams(location.search).get("cat");
 
 const navigation = [
+  { name: "CONTACT", to: "/#contact" },
   { name: "CV", to: "/cv" },
   { name: "UX/UI DESIGN", to: `/projects?cat=${CAT.UXUI.key}` },
   { name: "VIDEOGAMES & XR", to: `/projects?cat=${CAT.VDXR.key}` },
@@ -19,6 +20,10 @@ const navigation = [
   const isNavItemActive = (item) => {
     if (item.to === "/cv") {
       return location.pathname === "/cv";
+    }
+
+    if (item.to === "/#contact") {
+      return location.pathname === "/";
     }
 
     if (item.to.startsWith("/projects")) {

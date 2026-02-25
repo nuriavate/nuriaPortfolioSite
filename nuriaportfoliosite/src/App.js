@@ -40,7 +40,7 @@ function Home() {
       <hr className="my-4 border-t border-[#270400]/10" />
       <AboutSection></AboutSection>
       <hr className="my-4 border-t border-[#270400]/10" />
-      <div className="mb-6">
+      <div id="contact" className="mb-6">
         <Section titleh1={"Let's connect!"} titleh2={"CONTACT"} leftContent={
           <div>
             <div className="mx-auto max-w-2xl ">
