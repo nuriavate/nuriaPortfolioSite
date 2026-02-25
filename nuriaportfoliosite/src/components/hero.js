@@ -59,19 +59,19 @@ export default function Hero() {
                         src="/star.svg"
                         alt=""
                         aria-hidden="true"
-                        className="absolute left-2 top-28 w-10 rotate-[-8deg] opacity-95 transition-transform duration-700 ease-out hover:rotate-[172deg] sm:left-8 sm:top-24 sm:w-14 lg:left-[18%] lg:top-36 lg:w-16"
+                        className="absolute left-2 top-28 w-12 rotate-[-8deg] opacity-95 transition-transform duration-700 ease-out hover:rotate-[172deg] sm:left-8 sm:top-24 sm:w-16 lg:left-[18%] lg:top-36 lg:w-[4.5rem]"
                     />
                     <img
                         src="/star.svg"
                         alt=""
                         aria-hidden="true"
-                        className="absolute right-16 top-40 w-9 rotate-[10deg] opacity-95 transition-transform duration-700 ease-out hover:rotate-[190deg] sm:right-28 sm:top-36 sm:w-12 lg:right-[28%] lg:top-40 lg:w-14"
+                        className="absolute right-16 top-40 w-10 rotate-[10deg] opacity-95 transition-transform duration-700 ease-out hover:rotate-[190deg] sm:right-28 sm:top-36 sm:w-14 lg:right-[28%] lg:top-40 lg:w-16"
                     />
                     <img
                         src="/star.svg"
                         alt=""
                         aria-hidden="true"
-                        className="absolute right-6 top-48 w-6 rotate-[-12deg] opacity-90 transition-transform duration-700 ease-out hover:rotate-[168deg] sm:right-16 sm:top-44 sm:w-8 lg:right-[22%] lg:top-52 lg:w-9"
+                        className="absolute right-6 top-48 w-7 rotate-[-12deg] opacity-90 transition-transform duration-700 ease-out hover:rotate-[168deg] sm:right-16 sm:top-44 sm:w-9 lg:right-[22%] lg:top-52 lg:w-10"
                     />
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
      
