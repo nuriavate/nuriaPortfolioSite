@@ -37,7 +37,7 @@ const navigation = [
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <Link to="/" className="-m-1.5 p-1.5">
-              <img alt="Logo" src="/imatges/red_logo.svg" className="h-8 w-auto" />
+              <img alt="Logo" src="/imatges/red_logo.svg" className="h-10 w-auto lg:h-8" />
             </Link>
           </div>
 
