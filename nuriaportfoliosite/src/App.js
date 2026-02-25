@@ -29,14 +29,14 @@ function Home() {
       <Hero />
       
       <div id="projects">
-        <Section titleh1={"See what I've done"} titleh2={"WORK"} rightContent={
+        <Section titleh1={"Featured Works"} titleh2={"PROJECTS"} /*rightContent={
           <div>
             <p className="font-manrope mt-4 text-lg/8 text-[#270400]">Here's a small selection of some of the most creative projects I've had the opportunity to work on.</p>
             <LinkButton src="/Projects?uxui" text={"UX/UI Design Projects"} ></LinkButton>
             <LinkButton src="/Projects?vdxr" text={"Videogames and XR Projects"} ></LinkButton>
             <LinkButton src="/Projects?vdxr" text={"Other Projects"} ></LinkButton>
           </div>
-        }></Section>
+        }*/></Section>
       </div>
       <ProjectList items={homeProjects} />
       <hr className="my-4 border-t border-[#270400]/10" />

@@ -38,8 +38,8 @@ export default function ProjectList({ items = [] }) {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <h3 className="mt-4 text-lg text-[#E63A27] font-manrope font-semibold">{project.name}</h3>
-              <p className="mt-1 text-sm font-medium text-[#270400] font-manrope">
+              <h3 className="mt-4 text-2xl text-[#270400] font-urbanist font-semibold">{project.name}</h3>
+              <p className="mt-1 text-base font-medium text-[#270400] font-manrope">
                 {project.tinDescription}
               </p>
             </Link>

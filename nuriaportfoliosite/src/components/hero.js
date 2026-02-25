@@ -76,12 +76,12 @@ export default function Hero() {
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
      
                     </div>
-                    <div className="text-center">
+                    <div >
                         <h1 className="font-urbanist text-5xl font-semibold tracking-tight text-balance text-[#270400] sm:text-7xl">
-                          I’m Núria, a creative multidisciplinary digital designer based in Barcelona. 
+                       I'm Núria, a Digital Product Designer & UI Artist
                         </h1>
                         <p className="font-urbanist mt-8 text-lg font-medium text-pretty text-[#270400] sm:text-xl/8">
-                           Designing with purpose, sensitivity, and intuitive interaction.
+                           Designing with purpose, sensitivity, and intuitive interactions.
                         </p>
                         <div className="mt-10 flex justify-center">
                             <a
