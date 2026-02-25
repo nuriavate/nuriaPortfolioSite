@@ -67,12 +67,12 @@ export default function BentoCV() {
 <div className="mt-6 pr-8 pb-8 sm:pr-10 space-y-4">
   <div>
     <p className="text-2xl font-semibold font-urbanist text-[#270400]">Catalan, Spanish</p>
-    <p className="font-raleway text-base text-[#270400]">Native</p>
+    <p className="font-manrope text-base text-[#270400]">Native</p>
   </div>
 
   <div>
     <p className="text-2xl font-semibold font-urbanist text-[#270400]">English</p>
-    <p className="font-raleway text-base text-[#270400]">
+    <p className="font-manrope text-base text-[#270400]">
       Cambridge English: B2 First (FCE)
     </p>
   </div>

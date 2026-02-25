@@ -29,7 +29,7 @@ export default function ContactSection() {
                                 type="text"
                                 autoComplete="given-name"
                                 className="
-                                font-raleway
+                                font-manrope
     block w-full rounded-md
     bg-white
     px-3.5 py-2
@@ -55,7 +55,7 @@ export default function ContactSection() {
                                 type="text"
                                 autoComplete="family-name"
                                 className="
-                                font-raleway
+                                font-manrope
     block w-full rounded-md
     bg-white
     px-3.5 py-2
@@ -81,7 +81,7 @@ export default function ContactSection() {
                                 type="email"
                                 autoComplete="email"
                                 className="
-                                font-raleway
+                                font-manrope
   block w-full rounded-md
   bg-white
   px-3.5 py-2
@@ -123,7 +123,7 @@ export default function ContactSection() {
                                         name="country"
                                         autoComplete="country"
                                         aria-label="Country"
-                                        className="font-raleway
+                                        className="font-manrope
             col-start-1 row-start-1
             w-full appearance-none
             rounded-l-md
@@ -154,7 +154,7 @@ export default function ContactSection() {
                                     type="text"
                                     placeholder="123-456-7890"
                                     className="
-                                    font-raleway
+                                    font-manrope
           block min-w-0 grow
           py-2 pr-3 pl-3
           text-base text-[#270400]
@@ -178,7 +178,7 @@ export default function ContactSection() {
                                 name="message"
                                 rows={4}
                                 className="
-    font-raleway
+    font-manrope
                                 block w-full rounded-md
     bg-white
     px-3.5 py-2
@@ -207,9 +207,9 @@ export default function ContactSection() {
                                 />
                             </div>
                         </div>
-                        <label htmlFor="agree-to-policies" className="text-sm/6 text-[#644E4B] font-raleway">
+                        <label htmlFor="agree-to-policies" className="text-sm/6 text-[#644E4B] font-manrope">
                             By selecting this, you agree to our{' '}
-                            <a href="/privacy-policy" className="font-raleway font-semibold whitespace-nowrap text-[#E63A27]">
+                            <a href="/privacy-policy" className="font-manrope font-semibold whitespace-nowrap text-[#E63A27]">
                                 privacy policy
                             </a>
                             .

@@ -27,7 +27,7 @@ export default function KitchenHunt() {
             <DetailSection
                 titleh1={"The Plot"}
                 rightContent={
-                    <p className="font-raleway">
+                    <p className="font-manrope">
                         Jeff owns a kitchen that Klauss assumes he will inherit, as he is his only son. However, Jeff realizes that Klauss is not taking cooking or his future seriously and decides to give him an ultimatum. If he fails to help grow the business, he won’t even be welcome to eat there. Klauss must step up and complete every task as quickly as possible to secure his place and avoid being left with nothing. As the pressure builds, Klauss becomes increasingly overwhelmed, and his anxiety turns every challenge into something much bigger—almost like an entire world of its own.
                     </p>
                 }

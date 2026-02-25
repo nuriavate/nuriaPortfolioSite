@@ -14,11 +14,11 @@ export default function AwardCard({ title, issuer, descript }) {
             {title}
           </h3>
 
-          <p className="font-raleway font-semibold mt-1 text-base text-[#270400]">
+          <p className="font-manrope font-semibold mt-1 text-base text-[#270400]">
             {issuer}
           </p>
 
-          <p className="font-raleway mt-1 text-base text-[#270400]">
+          <p className="font-manrope mt-1 text-base text-[#270400]">
             {descript}
           </p>
         </div>

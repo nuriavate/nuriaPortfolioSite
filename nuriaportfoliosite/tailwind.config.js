@@ -6,10 +6,10 @@ module.exports = {
       fontFamily: {
         urbanist: ["Urbanist", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
         grace: ['"Covered By Your Grace"', "cursive"],
       },
     },
   },
   plugins: [],
 };
-

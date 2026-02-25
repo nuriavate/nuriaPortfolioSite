@@ -66,7 +66,7 @@ export default function SkillsSection() {
               Interpersonal Skills
             </h3>
 
-            <p className="mt-8 text-base leading-6 text-[#270400] font-raleway">
+            <p className="mt-8 text-base leading-6 text-[#270400] font-manrope">
               Flexible, Communicative, Self Starter, creative problem solver,
               Empathy, Detail Oriented
             </p>
@@ -84,8 +84,8 @@ function IconWrap({ children }) {
 function Block({ label, text }) {
   return (
     <div>
-      <p className="text-base font-semibold text-[#270400] font-raleway">{label}</p>
-      <p className="font-raleway mt-2 text-base leading-6 text-[#270400]">{text}</p>
+      <p className="text-base font-semibold text-[#270400] font-manrope">{label}</p>
+      <p className="font-manrope mt-2 text-base leading-6 text-[#270400]">{text}</p>
     </div>
   );
 }

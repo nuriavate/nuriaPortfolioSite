@@ -64,7 +64,7 @@ export default function ProjectHeader({
               KEY ACTIVITIES
             </p>
 
-            <ul className="font-raleway mt-3 space-y-1 text-base leading-6 text-[#270400]">
+            <ul className="font-manrope mt-3 space-y-1 text-base leading-6 text-[#270400]">
               {keyActivities.map((a) => (
                 <li key={a}>{a}</li>
               ))}
@@ -100,7 +100,7 @@ function MetaBlock({ label, value }) {
       <p className="font-urbanist font-black text-lg uppercase text-[#270400]">
         {label}
       </p>
-      <p className="font-raleway mt-2 text-base text-[#270400]">{value}</p>
+      <p className="font-manrope mt-2 text-base text-[#270400]">{value}</p>
     </div>
   );
 }

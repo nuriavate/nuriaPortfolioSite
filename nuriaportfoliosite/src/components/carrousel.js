@@ -165,7 +165,7 @@ return (
               />
             </div>
             <h3 className="font-urbanist mt-4 text-xl font-semibold">{quickViewItem.title}</h3>
-            <p className="font-raleway mt-2 text-sm leading-6 text-[#270400]/75">{quickViewItem.text}</p>
+            <p className="font-manrope mt-2 text-sm leading-6 text-[#270400]/75">{quickViewItem.text}</p>
           </div>
         </div>
       </div>
@@ -218,7 +218,7 @@ function Card({ item, isActive, onClick }) {
         <h3 className={["font-urbanist text-lg font-semibold", isActive ? "text-white" : "text-[#270400]"].join(" ")}>
           {item.title}
         </h3>
-        <p className={["font-raleway mt-2 text-sm leading-6", isActive ? "text-white/80" : "text-[#270400]/70"].join(" ")}>
+        <p className={["font-manrope mt-2 text-sm leading-6", isActive ? "text-white/80" : "text-[#270400]/70"].join(" ")}>
           {item.text}
         </p>
       </div>

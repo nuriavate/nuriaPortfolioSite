@@ -38,15 +38,15 @@ export default function ProjectList({ items = [] }) {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <h3 className="mt-4 text-lg text-[#E63A27] font-raleway font-semibold">{project.name}</h3>
-              <p className="mt-1 text-sm font-medium text-[#270400] font-raleway">
+              <h3 className="mt-4 text-lg text-[#E63A27] font-manrope font-semibold">{project.name}</h3>
+              <p className="mt-1 text-sm font-medium text-[#270400] font-manrope">
                 {project.tinDescription}
               </p>
             </Link>
           ))}
 
           {items.length === 0 && (
-            <p className="font-raleway col-span-full text-sm text-gray-500">
+            <p className="font-manrope col-span-full text-sm text-gray-500">
               No projects in this category.
             </p>
           )}

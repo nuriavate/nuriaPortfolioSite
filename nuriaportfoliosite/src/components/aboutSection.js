@@ -16,7 +16,7 @@ export default function AboutSection() {
                             <h1 className="font-urbanist mt-2 text-4xl font-semibold tracking-tight text-pretty text-[#270400] sm:text-5xl">
                                 Hi! I'm Núria
                             </h1>
-                            <p className="font-raleway mt-6 text-xl/8 text-[#270400]">
+                            <p className="font-manrope mt-6 text-xl/8 text-[#270400]">
                                 I recently graduated in Multimedia at CITM, UPC. I am a very creative person and very eager to contribute to our projects related to the creation and design of web pages, UX, UI and video games, application development.
                             </p>
                         </div>
