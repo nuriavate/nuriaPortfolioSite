@@ -93,6 +93,30 @@ export default function Barcimed() {
                     </div>
                 } />
             <hr className="space-y-4 border-t border-[#270400]/10" />
+            <DetailSection titleh1={"The 360 video production"} rightContent={<p></p>}></DetailSection>
+            <div className="mx-auto mt-8 w-full max-w-7xl px-6 lg:px-8">
+                <div className="mx-auto w-full max-w-[560px]">
+                    <div className="relative">
+                        <div className="absolute left-[3.5%] top-[7%] z-0 h-[85%] w-[94%] overflow-hidden rounded-[1.1rem] bg-black sm:rounded-[1.5rem]">
+                            <video
+                                className="h-full w-full object-cover"
+                                src="https://res.cloudinary.com/dbv5idped/video/upload/v1772477107/ScreenRecording_03-02-2026_19-19-50_1_qsnydj.mov"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                controls
+                            />
+                        </div>
+                        <img
+                            className="relative z-10 block h-auto w-full pointer-events-none select-none"
+                            src="/imatges/phone.png"
+                            alt="Phone frame horizontal"
+                        />
+                    </div>
+                </div>
+            </div>
+            <hr className="space-y-4 border-t border-[#270400]/10" />
             <DetailSection titleh1="User testing and Results"
                 rightContent={
                     <div className=" space-y-4">
