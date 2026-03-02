@@ -19,7 +19,7 @@ export const projects = [
     category: 'uxui',
     timeline: '4 months',
     client: 'Class project',
-    KeyActivities: ["UX/UI", "Gamification", "Development", "Prototyping"],
+    KeyActivities: ["Wireframing", "Userflowing", "React Native Development", "Prototyping", "API Implementation"],
     tinDescription: 'An App to register your readings',
     imageSrc: '/imatges/BookEcho/bookechoCover.png',
     imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
