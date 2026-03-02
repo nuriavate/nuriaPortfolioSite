@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import Header from "./components/header";
 import Hero from "./components/hero";
@@ -46,9 +47,9 @@ function Home() {
             <div className="mx-auto max-w-2xl ">
               <p className="mt-2 text-lg/8 text-gray-600 font-manrope">Feel free to contact me by email, phone, or throught the form.</p>
             </div>
-            <LinkButton text={"+34 618 517 258"}></LinkButton>
-            <LinkButton text={"nvaquerot@gmail.com"}></LinkButton>
-            <LinkButton text={"Linkedin"}></LinkButton>
+            <LinkButton src="tel:+34618517258" text={"+34 618 517 258"}></LinkButton>
+            <LinkButton src="mailto:nvaquerot@gmail.com" text={"nvaquerot@gmail.com"}></LinkButton>
+            <LinkButton src="https://www.linkedin.com/in/n%C3%BAria-vaquero-tell" text={"Linkedin"}></LinkButton>
           </div>
         } rightContent={
           <ContactSection></ContactSection>
@@ -61,6 +62,19 @@ function Home() {
 }
 
 export default function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const id = location.hash.replace("#", "");
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [location]);
+
   return (
     <>
       <Header />
