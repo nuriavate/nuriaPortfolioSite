@@ -95,7 +95,7 @@ export default function Trescat() {
                 <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-8">
                     <div className="space-y-3">
                         <h1 className="font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">Game "Atrapa'm si pots"</h1>
-                        <p className="font-manrope">Games inspired by usersâ€™ favourite shows help them feel part of the experience.</p>
+                        <p className="font-manrope">Games inspired by users’ favourite shows help them feel part of the experience.</p>
                     </div>
                     <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475367/2026-02-23_15-01-30_ectdiy.mp4"}></FeatureVideo>
                 </div>
@@ -105,7 +105,7 @@ export default function Trescat() {
                 <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-8">
                     <div className="space-y-3">
                         <h1 className="font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">Recat and Calendar</h1>
-                        <p className="font-manrope">Recat is a personalized video recap of usersâ€™ most-watched content, providing insights into their viewing habits and enhancing engagement and retention.</p>
+                        <p className="font-manrope">Recat is a personalized video recap of users’ most-watched content, providing insights into their viewing habits and enhancing engagement and retention.</p>
                     </div>
                     <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475415/2026-02-23_15-07-40_yeqlyg.mp4"}></FeatureVideo>
                 </div>
@@ -113,14 +113,14 @@ export default function Trescat() {
            
             <hr className="my-4 border-t border-[#270400]/10" />
 
-            <DetailSection titleh1={"Usability Test"} rightContent={<div className="font-manrope"><p>We conducted a usability test with five users to evaluate the emotion-based search engine, the game Atrapaâ€™m si pots, and the overall layout. Participants were asked to search content based on their current emotion and interact with the game to assess usability and engagement.
+            <DetailSection titleh1={"Usability Test"} rightContent={<div className="font-manrope"><p>We conducted a usability test with five users to evaluate the emotion-based search engine, the game Atrapa'm si pots, and the overall layout. Participants were asked to search content based on their current emotion and interact with the game to assess usability and engagement.
             </p></div>}></DetailSection>
 
             <FullImage src={"/imatges/3cat/usabilitytest.jpg"} alt={"Prototype testing process"}></FullImage>
             <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1={"Results"} rightContent={<div>
                 <ul className="font-manrope">
-                    <li>- 5 users tested the prototype; overall experience perceived as intuitive and easy to use.</li>
+                    <li>- 5 Users tested the prototype; overall experience perceived as intuitive and easy to use.</li>
                     <li>- Emotion-based search engine and gamified elements were the most valued features.</li>
                     <li>- Visual design (low text, strong imagery) enhanced engagement and clarity.</li>
                     <li>- Minor usability issues detected in initial navigation and typography hierarchy.</li>
