@@ -4,6 +4,7 @@ import ProjectList from "../projectList";
 import VideoEmbed from "../videoEmbed";
 import { projects } from "../../constants/projectsData";
 import Section from "../section";
+import DoubleImage from "../doubleImage";
 
 export default function Barcimed() {
     const homeProjects = projects.filter(
@@ -19,6 +20,34 @@ export default function Barcimed() {
             imageSrc: "/imatges/Barcimed/userflow.png",
             title: "2. Userflow",
             text: "I illustrated the user journeys and information architecture with Figma.",
+        },
+        {
+            imageSrc: "/imatges/Barcimed/wireframes.png",
+            title: "3. Wireframes",
+            text: "Low fidelity wireframes to validate hierarchy and navigation.",
+        },
+        {
+            imageSrc: "/imatges/Barcimed/components.jpg",
+            title: "4. Components",
+            text: "Next, I designed the components, including buttons, cards, illustrations, and other UI elements.",
+        },
+        {
+            imageSrc: "/imatges/Barcimed/highfid.png",
+            title: "5.High-Fidelity Prototype",
+            text: "The high-fidelity prototype has a clean, colorful, minimalist style highlighting the gamified elements.",
+        },
+    ];
+
+      const processItems2 = [
+        {
+            imageSrc: "/imatges/Barcimed/characters.jpg",
+            title: "1. Characters",
+            text: "I created the characters with a minimalist and vectorial design with Figma and Illustrator.",
+        },
+        {
+            imageSrc: "/imatges/Barcimed/userflow.png",
+            title: "2. Scenes",
+            text: "The scenes are a hybrid of 3D and 2D sprites, taking references from real-life locations of that period.",
         },
         {
             imageSrc: "/imatges/Barcimed/wireframes.png",
@@ -92,10 +121,12 @@ export default function Barcimed() {
                         <p className="font-manrope">The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
                     </div>
                 } />
+            <DoubleImage src1={"/imatges/Barcimed/colors.png"} src2={"/imatges/Barcimed/fonts.png"}></DoubleImage>
             <hr className="space-y-4 border-t border-[#270400]/10" />
             <DetailSection titleh1={"The 360 video production"} rightContent={<p></p>}></DetailSection>
+            <ProcessCarousel items={processItems2}></ProcessCarousel>
             <div className="mx-auto mt-8 w-full max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto w-full max-w-[560px]">
+                <div className="mx-auto w-full max-w-[560px] lg:max-w-[680px]">
                     <div className="relative">
                         <div className="absolute left-[3.5%] top-[7%] z-0 h-[85%] w-[94%] overflow-hidden rounded-[1.1rem] bg-black sm:rounded-[1.5rem]">
                             <video
@@ -105,7 +136,8 @@ export default function Barcimed() {
                                 muted
                                 loop
                                 playsInline
-                                controls
+                                controls={false}
+                                onPause={(e) => e.currentTarget.play()}
                             />
                         </div>
                         <img
@@ -130,7 +162,7 @@ export default function Barcimed() {
             <DetailSection titleh1="Future Scope"
                 rightContent={
                     <div className=" space-y-4">
-                        <p className="font-manrope">The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
+                        
                         <ul className="font-manrope">
                             <li>- Improve UX and navigation based on user feedback</li>
                             <li>- Make knowledge cards interactive and relevant to puzzles</li>

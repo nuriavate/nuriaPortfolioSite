@@ -28,16 +28,17 @@ export default function Giravolt() {
         <FullImage src={"/imatges/Giravolt/p2.png"}></FullImage>
         <FullImage src={"/imatges/Giravolt/p3.png"}></FullImage>
         <FullImage src={"/imatges/Giravolt/p4.png"}></FullImage>
-        <FullImage src={"/imatges/Giravolt/p5.png"}></FullImage>
         <FullImage src={"/imatges/Giravolt/p6.png"}></FullImage>
-        <FullImage src={"/imatges/Giravolt/p7.png"}></FullImage>
-        <FullImage src={"/imatges/Giravolt/p8.png"}></FullImage>
+
       </div>
 
       <hr className="my-4 border-t border-[#270400]/10" />
       <DetailSection titleh1={"Assets & Characters"}></DetailSection>
+    <div className="space-y-4">
       <FullImage src={"/imatges/Giravolt/renders.png"}></FullImage>
       <FullImage src={"/imatges/Giravolt/avatars.png"}></FullImage>
+    </div>
+      
       <hr className="my-4 border-t border-[#270400]/10" />
       <DetailSection titleh1={"Result"}></DetailSection>
       <VideoEmbed videoId={"Ysv7c4oLHxw"}></VideoEmbed>

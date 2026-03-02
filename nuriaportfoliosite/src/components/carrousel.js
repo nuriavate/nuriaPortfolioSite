@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-export default function ProcessCarousel({ title = "Process", items = [] }) {
+export default function ProcessCarousel({ title, items = [] }) {
   const [active, setActive] = useState(0);
   const [quickViewItem, setQuickViewItem] = useState(null);
   const wheelLockRef = useRef(false);
