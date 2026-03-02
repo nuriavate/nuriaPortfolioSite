@@ -103,8 +103,8 @@ export default function Barcimed() {
                         <p className="font-manrope">An interactive web app that guides users on a city route, where they solve puzzles by observing their surroundings to unlock immersive 360° videos and educational content in the form of cards.</p>
                     </div>
                 } />
-            <div className="mx-auto mt-8 w-full max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto w-full max-w-[560px] lg:max-w-[680px]">
+            <div className="mx-auto mt-8 w-full max-w-md px-6 lg:px-8">
+                <div className="mx-auto w-full max-w-[560px] lg:max-w-[620px]">
                     <div className="relative">
                         <div className="absolute left-[6.5%] top-[3%] z-0 h-[94%] w-[86%] overflow-hidden rounded-[1.1rem] bg-black sm:rounded-[3rem]">
                             <video
@@ -134,7 +134,7 @@ export default function Barcimed() {
             <DetailSection titleh1="Visual Design"
                 rightContent={
                     <div>
-                        <p className="font-manrope">The project targets Barcelona’s local population, especially those interested in cultural leisure. While mainly aimed at young people (ages 10–30), it is designed to be enjoyable for audiences of all ages.</p>
+                        <p className="font-manrope">The visual design is inspired by the natural colors of the city during that period: blues representing the sea, browns for houses and wood, and orange used for contrast. The typography combines a Gothic-style typeface with a pirate-inspired font, along with Futura for readable body text.</p>
                     </div>
                 } />
             <DoubleImage src1={"/imatges/Barcimed/colors.png"} src2={"/imatges/Barcimed/fonts.png"}></DoubleImage>
@@ -163,6 +163,11 @@ export default function Barcimed() {
                         />
                     </div>
                 </div>
+            </div>
+                        <div className="mx-auto mt-8 w-full max-w-7xl px-6 lg:px-8">
+                <p className="font-manrope lg:w-1/2">
+                    The 360° videos are experienced along the route, depicting scenes in the same locations where they are viewed. Users can look around and explore freely, enhancing the sense of immersion.
+                </p>
             </div>
             <hr className="space-y-4 border-t border-[#270400]/10" />
             <DetailSection titleh1="User testing and Results"
