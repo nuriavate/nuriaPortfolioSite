@@ -65,7 +65,10 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash) return;
+    if (!location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      return;
+    }
 
     const id = location.hash.replace("#", "");
     const element = document.getElementById(id);

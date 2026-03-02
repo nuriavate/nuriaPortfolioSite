@@ -34,11 +34,12 @@ export default function KitchenHunt() {
             />
             <VideoEmbed videoId={"v0rCEaGLmX0"}></VideoEmbed>
             <hr className="my-4 border-t border-[#270400]/10" />
-            <DetailSection titleh1={"The process"} rightContent={<p></p>}></DetailSection>
+          
             <ProcessCarousel title="The Level Design" items={processItems}></ProcessCarousel>
             <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1={"Characters"}></DetailSection>
-            <DoubleImage src1={"/imatges/KitchenHunt/turnaroundklauss.gif"} src2={"/imatges/KitchenHunt/jeff.jpg"}></DoubleImage>
+            <FullImage src={"/imatges/KitchenHunt/character.png"}></FullImage>
+            <DoubleImage src1={"/imatges/KitchenHunt/turnaroundklauss.gif"} src2={"/imatges/KitchenHunt/jeffv2.png"}></DoubleImage>
             <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1={"The scene"}></DetailSection>
             <div className="space-y-4">  
