@@ -14,27 +14,27 @@ export default function BookEcho() {
 
     const processItems = [
         {
-            imageSrc: "/imatges/Bookecho/book2.png",
+            imageSrc: "/imatges/BookEcho/book2.png",
             title: "1. User flow",
             text: "User flows were created to map all app functionalities in a clear and structured way.",
         },
         {
-            imageSrc: "/imatges/Bookecho/book3.png",
+            imageSrc: "/imatges/BookEcho/book3.png",
             title: "2. Wireframes",
             text: "Wireframes were used to define layout, structure, and core features.",
         },
         {
-            imageSrc: "/imatges/Bookecho/components.png",
+            imageSrc: "/imatges/BookEcho/components.png",
             title: "3. Components",
             text: "Components, colours, and typography were developed following a consistent visual identity.",
         },
         {
-            imageSrc: "/imatges/Bookecho/highfid.png",
+            imageSrc: "/imatges/BookEcho/highfid.png",
             title: "4. High Fidelity Prototype",
             text: "A high-fidelity prototype was built to test key interactions and user experience.",
         },
         {
-            imageSrc: "/imatges/Bookecho/code.png",
+            imageSrc: "/imatges/BookEcho/code.png",
             title: "5.Development",
             text: "Built with React Native. Integrated: Google Books API for book data and Supabase for user content.",
         },
