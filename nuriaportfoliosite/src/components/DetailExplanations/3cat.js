@@ -58,7 +58,7 @@ export default function Trescat() {
                         <h1 className="font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">Emotion Searcher</h1>
                         <p className="font-manrope">The emotion-based search allows user to discover content according to their emotional state rather than traditional categories and genres.</p>
                     </div>
-                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1771854584/2026-02-23_14-24-02_dtqi3e.mkv"}></FeatureVideo>
+                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475201/2026-02-23-14-24-02_lmc821.mp4"}></FeatureVideo>
                 </div>
             </div>
             <div className="w-full mx-auto mt-12 max-w-7xl px-6 lg:px-8">
@@ -67,7 +67,7 @@ export default function Trescat() {
                         <h1 className="font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">Drops</h1>
                         <p className="font-manrope">Drops are rewards unlocked while watching live content. They appear as QR codes that users scan with their mobile devices to receive exclusive items, such as profile wallpapers.</p>
                     </div>
-                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1771854634/2026-02-23_14-32-18_ifkl1t.mkv"}></FeatureVideo>
+                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475260/2026-02-23-14-32-18_yesfgx.mp4"}></FeatureVideo>
                 </div>
             </div>
 
@@ -77,7 +77,7 @@ export default function Trescat() {
                         <h1 className="font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">Live Chat</h1>
                         <p className="font-manrope">Live chats allow users to interact and actively participate during live sessions. They can be personalized to enhance the individual user experience and can also be accessed on mobile devices via QR code.</p>
                     </div>
-                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1771855087/2026-02-23_14-57-06_ewrmeo.mkv"}></FeatureVideo>
+                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475295/2026-02-23-14-57-06_dz3jas.mp4"}></FeatureVideo>
                 </div>
             </div>
 
@@ -87,7 +87,7 @@ export default function Trescat() {
                         <h1 className="font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">Edit Profile</h1>
                         <p className="font-manrope">Providing editable profiles allows users to express their identity within the platform. They can customise profile photos and wallpapers inspired by their favourite shows, reinforcing personalisation and engagement.</p>
                     </div>
-                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1771855360/2026-02-23_15-00-23_oqjtoq.mkv"}></FeatureVideo>
+                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475342/2026-02-23-15-00-23_eym4x3.mp4"}></FeatureVideo>
                 </div>
             </div>
 
@@ -97,7 +97,7 @@ export default function Trescat() {
                         <h1 className="font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">Game "Atrapa'm si pots"</h1>
                         <p className="font-manrope">Games inspired by usersâ€™ favourite shows help them feel part of the experience.</p>
                     </div>
-                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1771855370/2026-02-23_15-01-30_ectdiy.mkv"}></FeatureVideo>
+                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475367/2026-02-23_15-01-30_ectdiy.mp4"}></FeatureVideo>
                 </div>
             </div>
           
@@ -107,7 +107,7 @@ export default function Trescat() {
                         <h1 className="font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">Recat and Calendar</h1>
                         <p className="font-manrope">Recat is a personalized video recap of usersâ€™ most-watched content, providing insights into their viewing habits and enhancing engagement and retention.</p>
                     </div>
-                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1771855836/2026-02-23_15-07-40_yeqlyg.mkv"}></FeatureVideo>
+                    <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475415/2026-02-23_15-07-40_yeqlyg.mp4"}></FeatureVideo>
                 </div>
             </div>
            
