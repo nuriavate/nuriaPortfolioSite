@@ -108,7 +108,7 @@ export default function BookEcho() {
             <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1={"Visual Design"} rightContent={<p className="font-manrope">The design is built around a fresh palette dominated by turquoise green, with coral and yellow accents that add contrast and visual dynamism. Light backgrounds reinforce a sense of clarity and cleanliness. Urbanist is used for headings, providing presence and modernity, while Raleway is applied to body text, ensuring elegance and strong readability.
             </p>}></DetailSection>
-            <DoubleImage src1={"/imatges/Bookecho/colors.png"} src2={"/imatges/Bookecho/font.png"}></DoubleImage>
+            <DoubleImage src1={"/imatges/BookEcho/colors.png"} src2={"/imatges/BookEcho/font.png"}></DoubleImage>
             <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1={"Results"} rightContent={
                 <ul className="font-manrope">
