@@ -74,14 +74,14 @@ export default function Hero() {
                         className="absolute right-6 top-48 w-7 rotate-[-12deg] opacity-90 transition-transform duration-700 ease-out hover:rotate-[168deg] sm:right-16 sm:top-44 sm:w-9 lg:right-[22%] lg:top-52 lg:w-10"
                     />
                     <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-     
+
                     </div>
                     <div >
                         <h1 className="font-urbanist text-5xl font-semibold tracking-tight text-balance text-[#270400] sm:text-7xl">
-                       I'm Núria, a Digital Product Designer & UI Artist
+                            I'm <span className="font-grace">NÚRIA</span>, a Digital Product Designer & UI Artist
                         </h1>
                         <p className="font-urbanist mt-8 text-lg font-medium text-pretty text-[#270400] sm:text-xl/8">
-                           Designing with purpose, sensitivity, and intuitive interactions.
+                            Designing with purpose, sensitivity, and intuitive interactions.
                         </p>
                         <div className="mt-10 flex justify-center">
                             <a
@@ -99,7 +99,7 @@ export default function Hero() {
                     className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
                 >
                     <div
-                       
+
                     />
                 </div>
             </div>

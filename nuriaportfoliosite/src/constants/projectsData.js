@@ -25,7 +25,7 @@ export const projects = [
     imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
      contenido: 'bookecho.js',
   },
-  {
+  /*{
     id: 3,
     name: 'Nuñez i Navarro Maps',
     href: '#',
@@ -37,7 +37,7 @@ export const projects = [
     imageSrc: '/imatges/NN/portadaNN.png',
     imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
      contenido: 'nn.js',
-  },
+  },*/
   {
     id: 4,
     name: 'Barcimed',
@@ -77,6 +77,7 @@ export const projects = [
     imageAlt: 'Stack of 3 small drab green cardboard paper card refill boxes with white text.',
      contenido: 'kitchenhunt.js',
   },
+  /*
   {
     id: 7,
     name: 'Farmàcia Isabel Tell',
@@ -89,7 +90,7 @@ export const projects = [
     imageSrc: '/imatges/Farmacia/portadaFarmacia.png',
     imageAlt: 'Brass scissors with geometric design, black steel finger holes, and included upright brass stand.',
      contenido: 'farmacia.js',
-  },
+  },*/
   {
     id: 8,
     name: 'Stranger Things Clock',
