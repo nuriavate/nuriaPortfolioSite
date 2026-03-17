@@ -119,7 +119,9 @@ export default function BookEcho() {
 <VideoEmbed videoId={"bruBCcbozaA"}></VideoEmbed>
                             <hr className="space-y-4 border-t border-[#270400]/10" />
                             <Section titleh1={"You may also like"}></Section>
-                            <ProjectList items={homeProjects} />
+                            <div className="page-shell">
+                                <ProjectList items={homeProjects} />
+                            </div>
         </div>
     );
 }

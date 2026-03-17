@@ -46,7 +46,9 @@ export default function Giravolt() {
 
 
       <Section titleh1={"You may also like"}></Section>
-      <ProjectList items={homeProjects} />
+      <div className="page-shell">
+        <ProjectList items={homeProjects} />
+      </div>
     </div>
   );
 }
