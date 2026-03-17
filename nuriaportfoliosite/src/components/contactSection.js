@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 export default function ContactSection() {
     const [status, setStatus] = useState("");
@@ -12,8 +11,6 @@ export default function ContactSection() {
         const firstName = (formData.get("first-name") || "").toString().trim();
         const lastName = (formData.get("last-name") || "").toString().trim();
         const email = (formData.get("email") || "").toString().trim();
-        const country = (formData.get("country") || "").toString().trim();
-        const phone = (formData.get("phone-number") || "").toString().trim();
         const message = (formData.get("message") || "").toString().trim();
 
         if (!firstName || !email || !message) {
@@ -26,7 +23,6 @@ export default function ContactSection() {
             [
                 `Name: ${firstName} ${lastName}`.trim(),
                 `Email: ${email}`,
-                `Phone: ${country} ${phone}`.trim(),
                 "",
                 "Message:",
                 message,
@@ -139,73 +135,6 @@ export default function ContactSection() {
                             />
                         </div>
                     </div>
-                    <div className="sm:col-span-2">
-                        <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-[#270400] font-urbanist">
-                            Phone number
-                        </label>
-
-                        <div className="mt-2.5">
-                            <div
-                                className="
-        flex rounded-md bg-white
-        border border-[#270400]/30
-        outline outline-2 outline-transparent
-        focus-within:border-[#E63A27]
-        focus-within:outline-[#E63A27]
-        focus-within:outline-offset-2
-      "
-                            >
-                                <div className="grid shrink-0 grid-cols-1 relative">
-                                    <select
-                                        id="country"
-                                        name="country"
-                                        autoComplete="country"
-                                        aria-label="Country"
-                                        className="font-manrope
-            col-start-1 row-start-1
-            w-full appearance-none
-            rounded-l-md
-            py-2 pr-7 pl-3.5
-            text-base text-gray-500
-            bg-transparent
-            focus:outline-none
-            sm:text-sm/6
-          "
-                                    >
-                                        <option>US</option>
-                                        <option>CA</option>
-                                        <option>EU</option>
-                                    </select>
-
-                                    <ChevronDownIcon
-                                        aria-hidden="true"
-                                        className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                                    />
-                                </div>
-
-                                {/* separador vertical sutil entre select e input */}
-                                <div className="w-px bg-[#270400]/15 my-2" />
-
-                                <input
-                                    id="phone-number"
-                                    name="phone-number"
-                                    type="text"
-                                    placeholder="123-456-7890"
-                                    className="
-                                    font-manrope
-          block min-w-0 grow
-          py-2 pr-3 pl-3
-          text-base text-[#270400]
-          bg-transparent
-          placeholder:text-gray-400
-          focus:outline-none
-          sm:text-sm/6
-        "
-                                />
-                            </div>
-                        </div>
-                    </div>
-
                     <div className="sm:col-span-2">
                         <label htmlFor="message" className="font-urbanist block text-sm/6 font-semibold text-[#270400]">
                             Message

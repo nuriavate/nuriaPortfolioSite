@@ -42,25 +42,17 @@ export default function FeaturedProjectsBento({ items = [] }) {
 
         <Link
           to="/projects"
-          className="group relative overflow-hidden rounded-[12px] bg-[#F3E8DE] p-6 text-[#270400] sm:p-8 lg:col-span-2"
+          className="group relative overflow-hidden rounded-[12px] p-6 text-[#270400] sm:p-8 lg:col-span-2"
         >
-          <div className="absolute right-0 top-0 h-24 w-24 translate-x-6 -translate-y-6 rounded-full bg-[#E63A27]/15 blur-2xl" />
+          <div className="absolute right-0 top-0 h-24 w-24 translate-x-6 -translate-y-6 rounded-full " />
           <div className="relative grid gap-3 sm:grid-cols-[1.1fr_1fr] sm:items-end sm:gap-6">
             <div>
-              <p className="font-manrope text-xs uppercase tracking-[0.18em] text-[#270400]/55">
-                Work Index
-              </p>
-              <h3 className="mt-2 max-w-[16ch] font-urbanist text-2xl font-semibold leading-tight sm:text-3xl">
-                See the full selection of projects
-              </h3>
             </div>
             <div className="sm:justify-self-end sm:text-right">
-              <p className="font-manrope text-sm leading-6 text-[#270400]/75">
-                Browse UX/UI, XR, videogames and other visual work in one place.
-              </p>
-              <p className="mt-4 inline-flex items-center gap-2 font-manrope text-sm font-semibold text-[#E63A27] transition-transform duration-300 group-hover:translate-x-1">
-                Go to projects
-                <span aria-hidden="true">-&gt;</span>
+              <p className="mt-4 inline-flex items-center gap-2 font-urbanist text-4xl font-semibold text-[#E63A27] transition-transform duration-300 group-hover:translate-x-1">
+                <span aria-hidden="true" className="font-manrope">-&gt;</span>
+                All projects
+                
               </p>
             </div>
           </div>
