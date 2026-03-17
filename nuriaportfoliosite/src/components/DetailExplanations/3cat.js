@@ -6,9 +6,9 @@ import { projects } from "../../constants/projectsData";
 import ProjectList from "../projectList";
 
 export default function Trescat() {
-        const homeProjects = projects.filter(
-            (p) => p.id === 2 || p.id === 3
-        );
+    const homeProjects = projects.filter(
+        (p) => p.id === 2 || p.id === 3
+    );
     return (
         <div>
             <DetailSection titleh1={"Problem Statement"} rightContent={
@@ -46,7 +46,7 @@ export default function Trescat() {
                         <h1 className=" font-urbanist text-3xl font-semibold tracking-tight text-[#270400] sm:text-2xl">
                             Sign-Up and Onboarding
                         </h1>
-                        <p className="font-manrope">The onboarding experience was designed to introduce the platform while identifying usersâ€™ preferences and interests in order to personalise the experience. The process is simple and fast, reducing friction and preventing fatigue during the first interaction.</p>
+                        <p className="font-manrope">The onboarding experience was designed to introduce the platform while identifying users' preferences and interests in order to personalise the experience. The process is simple and fast, reducing friction and preventing fatigue during the first interaction.</p>
                     </div>
                     <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1771854473/2026-02-23-13-29-11_uapvyp.mp4"}></FeatureVideo>
                 </div>
@@ -100,7 +100,7 @@ export default function Trescat() {
                     <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475367/2026-02-23_15-01-30_ectdiy.mp4"}></FeatureVideo>
                 </div>
             </div>
-          
+
             <div className="w-full mx-auto mt-12 max-w-7xl px-6 lg:px-8">
                 <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-8">
                     <div className="space-y-3">
@@ -110,7 +110,7 @@ export default function Trescat() {
                     <FeatureVideo flush src={"https://res.cloudinary.com/dbv5idped/video/upload/v1772475415/2026-02-23_15-07-40_yeqlyg.mp4"}></FeatureVideo>
                 </div>
             </div>
-           
+
             <hr className="my-4 border-t border-[#270400]/10" />
 
             <DetailSection titleh1={"Usability Test"} rightContent={<div className="font-manrope"><p>We conducted a usability test with five users to evaluate the emotion-based search engine, the game Atrapa'm si pots, and the overall layout. Participants were asked to search content based on their current emotion and interact with the game to assess usability and engagement.
@@ -120,11 +120,11 @@ export default function Trescat() {
             <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1={"Results"} rightContent={<div>
                 <ul className="font-manrope">
-                    <li>- 5 Users tested the prototype; overall experience perceived as intuitive and easy to use.</li>
-                    <li>- Emotion-based search engine and gamified elements were the most valued features.</li>
-                    <li>- Visual design (low text, strong imagery) enhanced engagement and clarity.</li>
-                    <li>- Minor usability issues detected in initial navigation and typography hierarchy.</li>
-                    <li>- Improvements identified: clearer onboarding, stronger search visibility, refined text formatting.</li>
+                    <li>- Five users tested the prototype; the experience was perceived as intuitive and easy to use.</li>
+                    <li>- The emotion-based search and gamified elements were the most valued features.</li>
+                    <li>- The visual design, with minimal text and strong imagery, improved engagement and clarity.</li>
+                    <li>- Minor issues were detected in initial navigation and typography hierarchy.</li>
+                    <li>- Improvements identified: clearer onboarding, stronger search visibility, and refined text formatting.</li>
                 </ul>
             </div>}></DetailSection>
             <hr className="space-y-4 border-t border-[#270400]/10" />

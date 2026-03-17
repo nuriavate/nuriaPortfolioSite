@@ -3,8 +3,16 @@ import DetailSection from "../detailSection";
 import DoubleImage from "../doubleImage";
 import FullImage from "../Fullimage";
 import VideoEmbed from "../videoEmbed";
+import { projects } from "../../constants/projectsData";
+import Section from "../section";
+import ProjectList from "../projectList";
 
 export default function KitchenHunt() {
+
+       const homeProjects = projects.filter(
+            (p) => p.id === 4 || p.id === 5
+        );
+
     const processItems = [
         {
             imageSrc: "/imatges/KitchenHunt/lev1.png",
@@ -48,7 +56,9 @@ export default function KitchenHunt() {
                 <FullImage src={"/imatges/KitchenHunt/game3.png"}></FullImage>
                 <FullImage src={"/imatges/KitchenHunt/game4.png"}></FullImage>
                 <FullImage src={"/imatges/KitchenHunt/game5.png"}></FullImage></div>
-
+  <hr className="space-y-4 border-t border-[#270400]/10" />
+            <Section titleh1={"You may also like"}></Section>
+            <ProjectList items={homeProjects} />
         </div>
     );
 }

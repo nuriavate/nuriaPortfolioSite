@@ -14,6 +14,7 @@ import Giravolt from "../components/DetailExplanations/giravolt";
 import KitchenHunt from "../components/DetailExplanations/kitchenhunt";
 import Farmacia from "../components/DetailExplanations/farmacia";
 import StrangerThings from "../components/DetailExplanations/strangerthings";
+import Chernobyl from "../components/DetailExplanations/chernobyl";
 
 const detailComponents = {
   "3cat.js": Trescat,
@@ -24,6 +25,8 @@ const detailComponents = {
   "kitchenhunt.js": KitchenHunt,
   "farmacia.js": Farmacia,
   "strangerthings.js": StrangerThings,
+  "chernobyl.js": Chernobyl,
+
 };
 
 export default function Details() {

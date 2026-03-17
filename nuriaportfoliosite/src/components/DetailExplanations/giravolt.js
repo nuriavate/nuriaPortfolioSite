@@ -8,7 +8,7 @@ import ProjectList from "../projectList";
 
 export default function Giravolt() {
   const homeProjects = projects.filter(
-    (p) => p.id === 1 || p.id === 3
+    (p) => p.id === 6 || p.id === 4
   );
 
   return (

@@ -8,7 +8,7 @@ import DoubleImage from "../doubleImage";
 
 export default function Barcimed() {
     const homeProjects = projects.filter(
-        (p) => p.id === 1 || p.id === 4
+        (p) => p.id === 1 || p.id === 6
     );
     const processItems = [
         {
@@ -173,7 +173,7 @@ export default function Barcimed() {
             <DetailSection titleh1="User testing and Results"
                 rightContent={
                     <div className=" space-y-4">
-                        <p className="font-manrope">To validate the project, we conducted testing with three target users. Although the sample was small, it provided valuable qualitative insights about the experience. Participants followed the proposed route using the app and completed a feedback form assessing key aspects of the project.</p>
+                        <p className="font-manrope">To validate the project, I conducted testing with three target users. Although the sample was small, it provided valuable qualitative insights about the experience. Participants followed the proposed route using the app and completed a feedback form assessing key aspects of the project.</p>
                         <p className="font-manrope"><span className="font-semibold">Positive outcomes: </span>
                             The experience was immersive and engaging, with 360° videos and sound design particularly appreciated. The minimalist, colorful design and narrative encouraged exploration, and users reported learning about Barcelona’s history. Informational cards were valued for allowing flexible, pressure-free learning, and participants said they would recommend the experience to others.</p>
                         <p className="font-manrope"><span className="font-semibold">Areas for improvement:</span> Feedback highlighted usability and navigation issues, including unclear starting points and route guidance. Suggestions included enhancing the map, redesigning the route for efficiency, providing an overview of the journey, and making informational cards more interactive with visual or audio elements.</p>
