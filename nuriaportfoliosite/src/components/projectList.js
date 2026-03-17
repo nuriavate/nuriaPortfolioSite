@@ -18,10 +18,10 @@ function zoomOut(target) {
 export default function ProjectList({ items = [] }) {
   return (
     <div className="bg-white">
-      <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+      <div className="py-2 sm:py-4">
         <h2 className="sr-only">Projects</h2>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-2">
           {items.map((project) => (
             <Link
               key={project.id}
@@ -36,18 +36,18 @@ export default function ProjectList({ items = [] }) {
                 if (image) zoomOut(image);
               }}
             >
-              <div className="relative overflow-hidden rounded-[12px] bg-[#F8F2EE]">
+              <div className="relative overflow-hidden rounded-[1rem] bg-white">
                 <img
                   data-project-image
                   alt={project.imageAlt}
                   src={project.imageSrc}
                   className="aspect-[16/10] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
-                <div className="absolute left-4 top-4 inline-flex items-center rounded-[8px] border border-white/70 bg-white/90 px-3 py-1.5 font-manrope text-[11px] font-semibold uppercase tracking-[0.14em] text-[#270400]/80 backdrop-blur-sm">
+                <div className="absolute left-4 top-4 inline-flex items-center rounded-full border border-white/70 bg-white/90 px-3 py-1.5 font-manrope text-[11px] font-semibold uppercase tracking-[0.14em] text-[#270400]/80 backdrop-blur-sm">
                   {CATEGORY_LABELS[project.category] || project.category}
                 </div>
               </div>
-              <div className="pt-4 sm:pt-5">
+              <div className="px-1 pt-5">
                 <h3 className="font-urbanist text-[1.6rem] font-semibold leading-[1.05] text-[#270400] transition-colors duration-300 group-hover:text-[#E63A27] sm:text-[2rem]">
                   {project.name}
                 </h3>

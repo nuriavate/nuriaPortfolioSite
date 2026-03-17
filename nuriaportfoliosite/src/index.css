@@ -5,11 +5,14 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 
 body {
   margin: 0;
+  background: #ffffff;
+  color: #270400;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -20,4 +23,72 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.grace-soft {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@layer components {
+  .page-shell {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .section-space {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .section-space-sm {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .input-field {
+    width: 100%;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(39, 4, 0, 0.18);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.85rem 1rem;
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    color: #270400;
+    outline: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  }
+
+  .input-field::placeholder {
+    color: rgba(39, 4, 0, 0.35);
+  }
+
+  .input-field:focus {
+    border-color: rgba(230, 58, 39, 0.7);
+    box-shadow: 0 0 0 4px rgba(230, 58, 39, 0.12);
+    background: #ffffff;
+  }
+}
+
+@media (min-width: 640px) {
+  @layer components {
+    .page-shell {
+      padding-inline: 2rem;
+    }
+
+    .section-space {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+
+    .section-space-sm {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  }
 }

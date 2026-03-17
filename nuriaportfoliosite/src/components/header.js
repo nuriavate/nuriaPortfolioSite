@@ -64,7 +64,7 @@ const navigation = [
                 to={item.to}
                 className={
                   item.isButton
-                    ? `font-grace inline-flex items-center justify-center rounded-md px-4 py-2 text-2xl leading-none transition-colors ${
+                    ? `font-grace grace-soft inline-flex items-center justify-center rounded-md px-4 py-2 text-2xl leading-none transition-colors ${
                         isNavItemActive(item)
                           ? "bg-[#E63A27] text-white"
                           : "bg-[#E63A27] text-white hover:bg-[#FF5542]"
@@ -131,7 +131,7 @@ const navigation = [
                               onClick={() => setMobileMenuOpen(false)}
                               className={
                                 item.isButton
-                                  ? `font-grace -mx-3 mt-3 block rounded-md px-3 py-2 text-center text-3xl leading-none transition-all duration-300 ${
+                                  ? `font-grace grace-soft -mx-3 mt-3 block rounded-md px-3 py-2 text-center text-3xl leading-none transition-all duration-300 ${
                                       isNavItemActive(item)
                                         ? "bg-white text-[#E63A27]"
                                         : "bg-white text-[#E63A27] hover:bg-[#FFE6E2]"

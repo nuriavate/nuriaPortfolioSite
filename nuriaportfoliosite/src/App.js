@@ -26,28 +26,26 @@ function Home() {
   return (
     <>
       <Hero />
-      
-      <div id="projects" className="mb-6">
-        <Section titleh1={"Featured Works"} titleh2={"PROJECTS"} /*rightContent={
-          <div>
-            <p className="font-manrope mt-4 text-lg/8 text-[#270400]">Here's a small selection of some of the most creative projects I've had the opportunity to work on.</p>
-            <LinkButton src="/Projects?uxui" text={"UX/UI Design Projects"} ></LinkButton>
-            <LinkButton src="/Projects?vdxr" text={"Videogames and XR Projects"} ></LinkButton>
-            <LinkButton src="/Projects?vdxr" text={"Other Projects"} ></LinkButton>
-          </div>
-        }*/></Section>
+
+      <div id="projects">
+        <Section titleh1={"Featured Works"} titleh2={"PROJECTS"}></Section>
       </div>
       <FeaturedProjectsBento items={homeProjects} />
-      <hr className="my-4 border-t border-[#270400]/10" />
+      <div className="page-shell">
+        <hr className="border-t border-[#270400]/10" />
+      </div>
       <AboutSection></AboutSection>
-      <hr className="my-4 border-t border-[#270400]/10" />
-      <div id="contact" className="mb-6">
+      <div className="page-shell">
+        <hr className="border-t border-[#270400]/10" />
+      </div>
+      <div id="contact">
         <Section titleh1={"Let's connect!"} titleh2={"CONTACT"} leftContent={
           <div>
-            <div className="mx-auto max-w-2xl ">
-              <p className="mt-2 text-lg/8 text-gray-600 font-manrope">Feel free to contact me by email, phone, or throught the form.</p>
+            <div className="max-w-xl">
+              <p className="font-manrope text-lg leading-8 text-[#270400]/75">
+                Feel free to contact me by email or through the form.
+              </p>
             </div>
-            <LinkButton src="tel:+34618517258" text={"+34 618 517 258"}></LinkButton>
             <LinkButton src="mailto:nvaquerot@gmail.com" text={"nvaquerot@gmail.com"}></LinkButton>
             <LinkButton src="https://www.linkedin.com/in/n%C3%BAria-vaquero-tell" text={"Linkedin"}></LinkButton>
           </div>
@@ -79,16 +77,18 @@ export default function App() {
   }, [location]);
 
   return (
-    <>
+    <div className="flex min-h-[100dvh] flex-col bg-white">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/cv" element={<Cv />} />
-        <Route path="/detail/:id" element={<Details />} />
-      </Routes>
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/cv" element={<Cv />} />
+          <Route path="/detail/:id" element={<Details />} />
+        </Routes>
+      </main>
       <Footer></Footer>
-      
-    </>
+
+    </div>
   );
 }

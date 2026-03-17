@@ -5,13 +5,17 @@ export default function ExperienceComponent({
   description,
 }) {
   return (
-    <div className="border-b border-black/5 pb-4 last:border-none">
-      <p className="font-manrope text-base text-[#270400] ">{date}</p>
+    <div className="border-b border-[#270400]/10 pb-5 last:border-none">
+      <p className="font-manrope text-sm uppercase tracking-[0.08em] text-[#270400]/55">
+        {date}
+      </p>
       <p className="font-urbanist text-2xl font-semibold text-[#E63A27]">{affair}</p>
-      <p className="text-base  text-[#270400] font-manrope font-semibold">{company}</p>
+      <p className="font-manrope text-base font-semibold text-[#270400]">
+        {company}
+      </p>
 
       {description && (
-        <p className="mt-1 text-base text-[#270400] whitespace-pre-line font-manrope">
+        <p className="mt-2 whitespace-pre-line font-manrope text-base leading-7 text-[#270400]/78">
           {description}
         </p>
       )}

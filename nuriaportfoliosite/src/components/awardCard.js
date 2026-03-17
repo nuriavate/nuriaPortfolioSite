@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AwardCard({ title, issuer, descript }) {
   return (
-    <div className="w-full border-2 bg-[#FFDFDB]/20 border-[#FF8375] px-6 py-5">
+    <div className="w-full border border-[#E63A27]/18 px-6 py-6 sm:px-7">
       <div className="flex items-start gap-4">
 
         {/* Icon */}
@@ -10,15 +10,15 @@ export default function AwardCard({ title, issuer, descript }) {
 
         {/* Text */}
         <div>
-          <h3 className="font-urbanist text-2xl font-semibold text-[#E63A27] leading-snug">
+          <h3 className="font-urbanist text-2xl font-semibold leading-snug text-[#E63A27]">
             {title}
           </h3>
 
-          <p className="font-manrope font-semibold mt-1 text-base text-[#270400]">
+          <p className="mt-2 font-manrope text-base font-semibold text-[#270400]">
             {issuer}
           </p>
 
-          <p className="font-manrope mt-1 text-base text-[#270400]">
+          <p className="mt-2 font-manrope text-base leading-7 text-[#270400]/78">
             {descript}
           </p>
         </div>
