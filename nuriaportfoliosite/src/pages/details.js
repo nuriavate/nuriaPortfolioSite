@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import gsap from "gsap";
@@ -34,7 +34,6 @@ export default function Details() {
   const navigate = useNavigate();
   const { id } = useParams();
   const numericId = Number(id);
-  const [isEntering, setIsEntering] = useState(true);
 
   const project = projects.find((p) => p.id === numericId);
   const DetailContent = detailComponents[project?.contenido];
@@ -70,16 +69,6 @@ gsap.fromTo(
     return () => mm.revert();
   }, [project]);
 
-  useEffect(() => {
-    setIsEntering(true);
-
-    const enterTimer = window.setTimeout(() => {
-      setIsEntering(false);
-    }, 40);
-
-    return () => window.clearTimeout(enterTimer);
-  }, [numericId]);
-
   if (!project) {
     return (
       <div className="pt-24 text-center text-[#270400]">
@@ -91,12 +80,7 @@ gsap.fromTo(
   return (
     <div className="text-[#270400]">
       {/* Desktop: full-screen cover with fixed background for parallax-like scroll */}
-      <div
-        className={[
-          "relative left-1/2 right-1/2 -mx-[50vw] hidden w-screen transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] lg:block",
-          isEntering ? "translate-y-6 scale-[1.02] opacity-0" : "translate-y-0 scale-100 opacity-100",
-        ].join(" ")}
-      >
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] hidden w-screen lg:block">
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -119,12 +103,7 @@ gsap.fromTo(
       </div>
 
       {/* Mobile/Tablet: regular cover image */}
-      <div
-        className={[
-          "relative left-1/2 right-1/2 -mx-[50vw] w-screen transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
-          isEntering ? "translate-y-6 scale-[1.02] opacity-0" : "translate-y-0 scale-100 opacity-100",
-        ].join(" ")}
-      >
+      <div className="relative left-1/2 right-1/2 -mx-[50vw] w-screen lg:hidden">
         <button
           type="button"
           onClick={() => navigate(-1)}
@@ -142,25 +121,18 @@ gsap.fromTo(
         </div>
       </div>
 
-      <div
-        className={[
-          "transition-all delay-75 duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
-          isEntering ? "translate-y-8 opacity-0" : "translate-y-0 opacity-100",
-        ].join(" ")}
-      >
-        <ProjectHeader
-          categoryKey={project.category}
-          categoryLabel={categoryLabel}
-          title={project.name}
-          timeline={project.timeline}
-          client={project.client}
-          keyActivities={project.KeyActivities}
-        />
-        <hr className="my-4 border-t border-[#270400]/10" />
-        {DetailContent ? <DetailContent /> : null}
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <p className="mt-6 text-lg">{project.description}</p>
-        </div>
+      <ProjectHeader
+        categoryKey={project.category}
+        categoryLabel={categoryLabel}
+        title={project.name}
+        timeline={project.timeline}
+        client={project.client}
+        keyActivities={project.KeyActivities}
+      />
+      <hr className="my-4 border-t border-[#270400]/10" />
+      {DetailContent ? <DetailContent /> : null}
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <p className="mt-6 text-lg">{project.description}</p>
       </div>
     </div>
   );
