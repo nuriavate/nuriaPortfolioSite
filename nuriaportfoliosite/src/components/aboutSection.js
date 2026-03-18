@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/outline";
 import ButtonText from "./buttonText";
 import LinkButton from "./linkButton";
+import Reveal from "./reveal";
 import {
   SECTION_BODY_CLASS,
   SECTION_BODY_SECONDARY_CLASS,
@@ -31,7 +32,7 @@ export default function AboutSection() {
       />
 
       <div className="page-shell grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)] lg:items-start lg:gap-16">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl" distance={24}>
           <p className={SECTION_EYEBROW_CLASS}>
             About me
           </p>
@@ -60,21 +61,21 @@ export default function AboutSection() {
               text="Download my Portfolio"
             />
           </div>
-        </div>
+        </Reveal>
 
-        <div className="lg:sticky lg:top-8">
+        <Reveal className="lg:sticky lg:top-8" delay={130} distance={36}>
           <div className="relative mx-auto max-w-xl">
             <div
               aria-hidden="true"
-              className="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-[#E63A27]/10 blur-2xl"
+              className="absolute -left-6 -top-6 h-24 w-24 rounded-full bg-[#E63A27]/10 blur-2xl transition-transform duration-700 ease-out hover:scale-110"
             />
             <img
               alt="Portrait of Nuria"
               src="/imatges/me.jpg"
-              className="w-full rounded-[1.2rem] bg-[#270400] object-cover shadow-[0_24px_70px_-45px_rgba(39,4,0,0.35)]"
+              className="w-full rounded-[1.2rem] bg-[#270400] object-cover shadow-[0_24px_70px_-45px_rgba(39,4,0,0.35)] transition-transform duration-700 ease-out hover:-translate-y-1 hover:scale-[1.01]"
             />
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
