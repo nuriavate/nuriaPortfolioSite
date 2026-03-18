@@ -4,13 +4,12 @@ import {
   SparklesIcon,
   SwatchIcon,
 } from "@heroicons/react/24/outline";
+import ButtonText from "./buttonText";
 import LinkButton from "./linkButton";
-
 const services = [
   { title: "UX/UI Design", icon: CursorArrowRaysIcon },
-  { title: "Graphic Design", icon: SwatchIcon },
-  { title: "Videogames & XR", icon: SparklesIcon },
-  { title: "UI Art & Development", icon: PaintBrushIcon },
+  { title: "Visual & Motion Design", icon: SwatchIcon },
+  { title: "Interactive & Frontend Development", icon: SparklesIcon },
 ];
 
 export default function AboutSection() {
@@ -45,28 +44,7 @@ export default function AboutSection() {
           </p>
 
           <div className="mt-10">
-            <p className="font-manrope text-sm font-semibold uppercase tracking-[0.18em] text-[#E63A27]">
-              Services
-            </p>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {services.map((service) => {
-                const Icon = service.icon;
-
-                return (
-                  <article
-                    key={service.title}
-                    className="flex items-center gap-4 rounded-[0.85rem] bg-white py-3"
-                  >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#E63A27]/10 text-[#E63A27]">
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                    </div>
-                    <h3 className="font-urbanist text-lg font-semibold text-[#270400]">
-                      {service.title}
-                    </h3>
-                  </article>
-                );
-              })}
-            </div>
+            <ButtonText to="/cv" text="See CV" />
           </div>
 
           <div className="mt-8">

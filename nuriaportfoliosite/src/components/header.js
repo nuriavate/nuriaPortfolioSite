@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { PROJECT_CATEGORIES as CAT } from "../constants/projectCategories";
+import ButtonText from "./buttonText";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,25 +60,21 @@ const navigation = [
 
           <div className="hidden font-urbanist lg:flex lg:items-center lg:gap-x-12">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.to}
-                className={
-                  item.isButton
-                    ? `font-grace grace-soft inline-flex items-center justify-center rounded-md px-4 py-2 text-2xl leading-none transition-colors ${
-                        isNavItemActive(item)
-                          ? "bg-[#E63A27] text-white"
-                          : "bg-[#E63A27] text-white hover:bg-[#FF5542]"
-                      }`
-                    : `relative inline-flex h-10 items-center text-sm/6 font-semibold transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:rounded-full after:bg-[#E63A27] after:transition-all after:duration-300 after:content-[''] ${
-                        isNavItemActive(item)
-                          ? "text-[#E63A27] after:w-full"
-                          : "text-[#270400] after:w-0 hover:text-[#E63A27] hover:after:w-full"
-                      }`
-                }
-              >
-                {item.name}
-              </Link>
+              item.isButton ? (
+                <ButtonText key={item.name} to={item.to} text={item.name} />
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.to}
+                  className={`relative inline-flex h-10 items-center text-sm/6 font-semibold transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:rounded-full after:bg-[#E63A27] after:transition-all after:duration-300 after:content-[''] ${
+                    isNavItemActive(item)
+                      ? "text-[#E63A27] after:w-full"
+                      : "text-[#270400] after:w-0 hover:text-[#E63A27] hover:after:w-full"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
         </nav>
@@ -131,10 +128,10 @@ const navigation = [
                               onClick={() => setMobileMenuOpen(false)}
                               className={
                                 item.isButton
-                                  ? `font-grace grace-soft -mx-3 mt-3 block rounded-md px-3 py-2 text-center text-3xl leading-none transition-all duration-300 ${
+                                  ? `font-grace grace-soft -mx-3 mt-3 block rounded-md px-3 py-2 text-center text-3xl leading-none uppercase transition-all duration-300 ${
                                       isNavItemActive(item)
                                         ? "bg-white text-[#E63A27]"
-                                        : "bg-white text-[#E63A27] hover:bg-[#FFE6E2]"
+                                        : "bg-white text-[#E63A27] hover:bg-[#FF5542] hover:text-white"
                                     }`
                                   : `font-urbanist -mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold transition-all duration-300 ${
                                       isNavItemActive(item)
