@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ButtonText from "./buttonText";
 
 export default function ContactSection() {
   const [status, setStatus] = useState("");
@@ -125,12 +126,12 @@ export default function ContactSection() {
         </div>
 
         <div className="mt-8">
-          <button
+          <ButtonText
+            as="button"
             type="submit"
-            className="grace-soft block w-full rounded-[0.85rem] bg-[#E63A27] px-4 py-3 text-center text-xl text-white transition hover:bg-[#d73422] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E63A27] font-grace"
-          >
-            LET&apos;S TALK
-          </button>
+            text="Let's talk"
+            className="flex w-full px-4 py-3 text-center text-xl"
+          />
           {status && (
             <p className="mt-3 text-sm font-manrope text-[#270400]/70">
               {status}

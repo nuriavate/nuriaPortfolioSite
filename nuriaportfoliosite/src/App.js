@@ -14,6 +14,7 @@ import AboutSection from "./components/aboutSection";
 import Section from "./components/section";
 import LinkButton from "./components/linkButton";
 import Details from "./pages/details";
+import { SECTION_BODY_CLASS } from "./components/sectionTypography";
 
 function Home() {
   const homeProjects = projects.slice(0, 6);
@@ -40,7 +41,7 @@ function Home() {
           leftContent={
             <div>
               <div className="max-w-xl">
-                <p className="font-manrope text-lg leading-8 text-[#270400]/75">
+                <p className={SECTION_BODY_CLASS}>
                   Feel free to contact me by email or through the form.
                 </p>
               </div>

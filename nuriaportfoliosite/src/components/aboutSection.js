@@ -6,6 +6,12 @@ import {
 } from "@heroicons/react/24/outline";
 import ButtonText from "./buttonText";
 import LinkButton from "./linkButton";
+import {
+  SECTION_BODY_CLASS,
+  SECTION_BODY_SECONDARY_CLASS,
+  SECTION_EYEBROW_CLASS,
+  SECTION_TITLE_CLASS,
+} from "./sectionTypography";
 const services = [
   { title: "UX/UI Design", icon: CursorArrowRaysIcon },
   { title: "Visual & Motion Design", icon: SwatchIcon },
@@ -26,19 +32,19 @@ export default function AboutSection() {
 
       <div className="page-shell grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)] lg:items-start lg:gap-16">
         <div className="max-w-2xl">
-          <p className="font-urbanist text-sm font-semibold uppercase tracking-[0.18em] text-[#270400]/65 sm:text-base">
+          <p className={SECTION_EYEBROW_CLASS}>
             About me
           </p>
-          <h2 className="font-urbanist mt-3 text-4xl font-semibold tracking-tight text-[#270400] sm:text-5xl">
+          <h2 className={SECTION_TITLE_CLASS}>
             Hi! I&apos;m Nuria
           </h2>
 
-          <p className="font-manrope mt-6 text-lg leading-8 text-[#270400]/78 sm:text-xl">
+          <p className={`mt-6 ${SECTION_BODY_CLASS}`}>
             I&apos;m a Digital Product Designer graduated in Multimedia from
             CITM UPC. During my studies I worked on projects across UX/UI,
             front-end, graphic design, videogame art and motion design.
           </p>
-          <p className="font-manrope mt-5 text-base leading-8 text-[#270400]/78 sm:text-lg">
+          <p className={`mt-5 ${SECTION_BODY_SECONDARY_CLASS}`}>
             I enjoy building clear, engaging and memorable experiences with a
             balance of visual sensitivity, structure and versatility.
           </p>
