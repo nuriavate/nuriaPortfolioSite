@@ -1,9 +1,3 @@
-import {
-  CursorArrowRaysIcon,
-  PaintBrushIcon,
-  SparklesIcon,
-  SwatchIcon,
-} from "@heroicons/react/24/outline";
 import ButtonText from "./buttonText";
 import LinkButton from "./linkButton";
 import Reveal from "./reveal";
@@ -13,12 +7,6 @@ import {
   SECTION_EYEBROW_CLASS,
   SECTION_TITLE_CLASS,
 } from "./sectionTypography";
-const services = [
-  { title: "UX/UI Design", icon: CursorArrowRaysIcon },
-  { title: "Visual & Motion Design", icon: SwatchIcon },
-  { title: "Interactive & Frontend Development", icon: SparklesIcon },
-];
-
 export default function AboutSection() {
   return (
     <section className="section-space relative isolate overflow-hidden bg-white">
