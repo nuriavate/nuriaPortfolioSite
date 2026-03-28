@@ -2,7 +2,7 @@ import { ArrowDownIcon } from "@heroicons/react/24/outline";
 
 export default function Hero() {
   return (
-    <div className="group relative overflow-hidden bg-white">
+    <div className="group relative overflow-hidden bg-[#F6E7DF]">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-0 opacity-[0.1] mix-blend-multiply"
@@ -11,22 +11,6 @@ export default function Hero() {
             "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0.22'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E\")",
           backgroundSize: "220px 220px",
           backgroundRepeat: "repeat",
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-0 transition-transform duration-700 ease-out group-hover:scale-[1.01]"
-        style={{
-          background:
-            "radial-gradient(105% 78% at 50% 92%, rgba(230,58,39,0.5) 0%, rgba(230,58,39,0.22) 34%, rgba(230,58,39,0.08) 58%, rgba(245,245,245,0) 84%)",
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-0 opacity-0 transition-opacity duration-700 ease-out group-hover:opacity-100"
-        style={{
-          background:
-            "radial-gradient(110% 82% at 58% 86%, rgba(230,58,39,0.32) 0%, rgba(230,58,39,0.14) 34%, rgba(230,58,39,0.05) 58%, rgba(245,245,245,0) 86%)",
         }}
       />
 

@@ -18,7 +18,7 @@ export default function LinkButton({ src = "#", text }) {
           focus-visible:outline-[#E63A27]
         "
       >
-        {text}
+      
         <ArrowRightIcon
           className="
             h-5 w-5
@@ -27,6 +27,7 @@ export default function LinkButton({ src = "#", text }) {
             group-hover:text-[#FF5542]
           "
         />
+          {text}
       </a>
     </div>
   );
