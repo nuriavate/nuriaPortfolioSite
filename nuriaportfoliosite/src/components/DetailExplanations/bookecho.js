@@ -9,7 +9,7 @@ import VideoEmbed from "../videoEmbed";
 
 export default function BookEcho() {
  const homeProjects = projects.filter(
-            (p) => p.id === 1 || p.id === 3
+            (p) => p.id === 1 || p.id === 4
         );
 
     const processItems = [

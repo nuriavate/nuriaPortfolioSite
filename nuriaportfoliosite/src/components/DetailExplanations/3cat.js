@@ -7,7 +7,7 @@ import ProjectList from "../projectList";
 
 export default function Trescat() {
     const homeProjects = projects.filter(
-        (p) => p.id === 2 || p.id === 3
+        (p) => p.id === 2 || p.id === 4
     );
     return (
         <div>
@@ -35,8 +35,9 @@ export default function Trescat() {
                         <li><span class="font-bold">First Ideation:</span> The team was divided in four verticals. Each one getting in depth according to the QA: Accessibility, Multiscreen, Content, Interaction.</li>
                         <li><span class="font-bold">Iteration phases:</span> After this ideation and feedback of the client we determined three important concepts: Personal Evolution, Community and Discovery platform.</li>
                         <li><span class="font-bold">Consolidation:</span> We created the final prototype with the final ideas and then we presented it.</li>
-                    </ol>
+                    </ol>                   
                 </div>} />
+                <FullImage src="/imatges/3cat/steps.png" alt={"imatge with the Phases of the project"}></FullImage>
             <hr className="my-4 border-t border-[#270400]/10" />
             <DetailSection titleh1={"Final Ideas"} rightContent={<p className="font-manrope">The final features address different user needs, enhancing exploration, motivation, personalisation, and interaction with the content. As a result, they increase overall user engagement with the platform.
             </p>} />
