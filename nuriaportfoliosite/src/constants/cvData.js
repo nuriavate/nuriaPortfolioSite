@@ -54,6 +54,15 @@ sales goals.`,
 
   {
   id: 6,
+  date: 'Apr 2026 - In progress',
+  affair: 'Master’s UX in Digital Product Design',
+  company: 'ESDI X NTT DATA',
+  description: ``,
+  type: 'education',
+},
+
+  {
+  id: 7,
   date: 'Sept 2021 - Jul 2025',
   affair: 'Multimedia Degree',
   company: 'CITM UPC',
@@ -62,7 +71,7 @@ sales goals.`,
 },
 
   {
-  id: 7,
+  id: 8,
   date: 'Sept 2025 - In progress',
   affair: 'Foundations of User Experience (UX) Design',
   company: 'Google (Coursera)',
