@@ -165,7 +165,7 @@ export default function Barcimed() {
                 </div>
             </div>
                         <div className="mx-auto mt-8 w-full max-w-7xl px-6 lg:px-8">
-                <p className="font-manrope lg:w-1/2">
+                <p className="font-manrope lg:w-1/2 mb-8">
                     The 360° videos are experienced along the route, depicting scenes in the same locations where they are viewed. Users can look around and explore freely, enhancing the sense of immersion.
                 </p>
             </div>

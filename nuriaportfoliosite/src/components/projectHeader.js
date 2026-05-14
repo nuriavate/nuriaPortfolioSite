@@ -51,7 +51,7 @@ export default function ProjectHeader({
         </h1>
 
         {/* 2-col meta grid */}
-        <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:gap-x-16">
+        <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-2 lg:gap-x-16">
           {/* Left column */}
           <div className="space-y-8">
             <MetaBlock label="TIMELINE" value={timeline} />
@@ -60,7 +60,7 @@ export default function ProjectHeader({
 
           {/* Right column */}
           <div>
-            <p className="font-urbanist font-black text-lg uppercase text-[#270400]">
+            <p className="font-urbanist font-black text-md uppercase text-[#270400]">
               KEY ACTIVITIES
             </p>
 
@@ -97,7 +97,7 @@ export default function ProjectHeader({
 function MetaBlock({ label, value }) {
   return (
     <div>
-      <p className="font-urbanist font-black text-lg uppercase text-[#270400]">
+      <p className="font-urbanist font-black text-md uppercase text-[#270400]">
         {label}
       </p>
       <p className="font-manrope mt-2 text-base text-[#270400]">{value}</p>

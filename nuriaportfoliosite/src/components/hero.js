@@ -41,7 +41,7 @@ export default function Hero() {
 
           <h1 className="font-urbanist mt-6 text-5xl font-semibold tracking-tight text-balance text-[#270400] sm:text-7xl">
             I&apos;m <span className="font-grace grace-soft text-[0.92em] text-[#E63A27]">NÚRIA</span>, a
-            Digital Product Designer & UI Artist
+            Digital Product Designer & Multimedia Designer
           </h1>
 
           <p className="font-manrope mx-auto mt-8 max-w-2xl text-lg leading-8 text-[#270400]/78 sm:text-xl">
