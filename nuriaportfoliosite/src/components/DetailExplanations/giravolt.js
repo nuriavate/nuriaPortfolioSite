@@ -2,9 +2,8 @@ import DetailSection from "../detailSection";
 import DoubleImage from "../doubleImage";
 import FullImage from "../Fullimage";
 import VideoEmbed from "../videoEmbed";
-import Section from "../section";
 import { projects } from "../../constants/projectsData";
-import ProjectList from "../projectList";
+import RelatedProjects from "../relatedProjects";
 
 export default function Giravolt() {
   const homeProjects = projects.filter(
@@ -45,10 +44,7 @@ export default function Giravolt() {
       <hr className="my-4 border-t border-[#270400]/10" />
 
 
-      <Section titleh1={"You may also like"}></Section>
-      <div className="page-shell">
-        <ProjectList items={homeProjects} />
-      </div>
+      <RelatedProjects items={homeProjects} />
     </div>
   );
 }

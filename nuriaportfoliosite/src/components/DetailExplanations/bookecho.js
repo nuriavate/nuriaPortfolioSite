@@ -1,11 +1,10 @@
 import ProcessCarousel from "../carrousel";
 import DetailSection from "../detailSection";
 import FullImage from "../Fullimage";
-import Section from "../section";
 import { projects } from "../../constants/projectsData";
-import ProjectList from "../projectList";
 import DoubleImage from "../doubleImage";
 import VideoEmbed from "../videoEmbed";
+import RelatedProjects from "../relatedProjects";
 
 export default function BookEcho() {
  const homeProjects = projects.filter(
@@ -118,10 +117,7 @@ export default function BookEcho() {
                 </ul>}></DetailSection>
 <VideoEmbed videoId={"bruBCcbozaA"}></VideoEmbed>
                             <hr className="space-y-4 border-t border-[#270400]/10" />
-                            <Section titleh1={"You may also like"}></Section>
-                            <div className="page-shell">
-                                <ProjectList items={homeProjects} />
-                            </div>
+                            <RelatedProjects items={homeProjects} />
         </div>
     );
 }

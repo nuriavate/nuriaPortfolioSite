@@ -1,5 +1,23 @@
 export const cvData = [
-{
+
+  {id: 10,
+  date: 'Jun 2026 - Present',
+  affair: 'UX/UI Design Intern',
+company:'WeAreFirma',
+description: '',
+link:'https://www.wearefirma.com/es',
+type: 'experience',
+},
+  {id: 9,
+  date: 'Apr 2026 - Present',
+  affair: 'UI Artist',
+company:'Ravenwhisp Studios',
+description: 'Creating the game UI for the videogame Bound by Death',
+link:'https://ravenwhisp.github.io/Ravenwhisp/#home',
+type: 'experience',
+},
+
+  {
   id: 1,
   date: 'Jun 2024 - Sep 2024',
   affair: 'Digital Product Designer Intern',
@@ -8,6 +26,7 @@ export const cvData = [
 Established prototypes and animations with Figma.
 Tested and documented Google Maps API integrations.
 Uploaded text and image content into Sanity CMS.`,
+link:'https://thenorthstudio.com/',
   type: 'experience',
 },
 
@@ -38,17 +57,6 @@ Prototyped and designed UI with Figma.`,
   description: `Initiated a game design document.  
 Designed UI HUD and Visual Identity for a VR video game.  
 Modeled and texturized assets with Maya and Substance Painter`,
-  type: 'experience',
-},
-
-  {
-  id: 5,
-  date: 'Nov 2025 - Feb 2026',
-  affair: 'Sales Assistant',
-  company: 'Muy Mucho',
-  description: `Operated cash register, restocked and labeled products, ensured
-store cleanliness, and provided customer support to help achieve
-sales goals.`,
   type: 'experience',
 },
 
